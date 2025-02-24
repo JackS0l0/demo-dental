@@ -1,0 +1,349 @@
+@font-face {
+  font-family: monomakhRegular;
+  src: url(../font/Monomakh-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  font-family: monomakhRegular;
+  background: rgb(21, 40, 73);
+  background: linear-gradient(125deg, rgb(21, 40, 73) 35%, rgb(3, 5, 31) 100%);
+  background-attachment: fixed;
+}
+body p {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: white;
+}
+body .btn {
+  color: white;
+}
+body .navbarBlock {
+  padding: 2vw 5vw;
+}
+body .navbarBlock .float1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .navbarBlock .float1 span {
+  display: flex;
+  align-items: center;
+}
+body .navbarBlock .float1 span .dropdown .btnmenu {
+  margin-left: 1vw;
+}
+body .navbarBlock .float1 span .dropdown .btnmenu img {
+  width: 2vw;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu {
+  width: 90vw;
+  border-radius: 0;
+  border: 0.1vw solid white;
+  background: rgb(0, 62, 173);
+  background: rgb(21, 40, 73);
+  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  inset: 5vw 0 auto auto !important;
+  padding: 2vw;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-right: 0.1vw solid white;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block p {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+  color: white;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block a {
+  margin-bottom: 1vw;
+  color: white;
+  font-size: 1.6vw;
+  transition: 1s;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block a:hover {
+  color: rgb(30, 30, 30);
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block:last-child {
+  border-right: none;
+}
+body .navbarBlock .float1 span .logo {
+  color: white;
+  font-size: 2vw;
+  font-weight: bold;
+}
+body .navbarBlock .float1 span .logo img {
+  margin-right: 1vw;
+  width: 4vw;
+}
+body .navbarBlock .float1 span .left {
+  margin-left: 1vw;
+  color: white;
+  font-size: 1.6vw;
+}
+body header .headCarusel {
+  position: relative;
+}
+body header .headCarusel div img {
+  width: 100%;
+  height: 86.6vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(50%);
+}
+body header .headText {
+  width: 100%;
+  position: absolute;
+  bottom: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body header .headText .discovery {
+  font-size: 2vw;
+  color: white;
+  border: 0.1vw solid white;
+  padding: 0.5vw 2vw;
+  border-radius: 0.5vw;
+  margin-top: 15vw;
+}
+body header .headText .f1 {
+  font-size: 4vw;
+  color: white;
+}
+body header .headText .f2 {
+  font-size: 3vw;
+  color: white;
+}
+body main {
+  min-height: 100vh;
+}
+body main .firstModule {
+  color: white;
+  padding: 5vw 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .firstModule p {
+  margin-bottom: 2vw;
+}
+body main .firstModule .f1 {
+  font-size: 4vw;
+}
+body main .firstModule .f2 {
+  font-size: 2vw;
+}
+body main .firstModule .f3 {
+  width: 60%;
+}
+body main .firstModule .btn {
+  margin-top: 5vw;
+  color: white;
+  border-color: white;
+  font-size: 2vw;
+}
+body main .firstModule .block {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2vw;
+}
+body main .welcomeModule {
+  margin: 2vw 5vw;
+  color: white;
+  border: 0.01vw solid rgba(255, 255, 255, 0.5);
+  border-radius: 1vw;
+  background: rgb(0, 62, 173);
+  background: rgb(21, 40, 73);
+  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2vw;
+}
+body main .welcomeModule .head {
+  margin-bottom: 2vw;
+  text-align: center;
+}
+body main .welcomeModule .head p {
+  font-size: 2vw;
+}
+body main .welcomeModule .head .f1 {
+  font-size: 4vw;
+}
+body main .welcomeModule .middle {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+body main .welcomeModule .middle .left {
+  width: 70%;
+}
+body main .welcomeModule .middle .right {
+  margin-left: 7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  text-align: center;
+}
+body main .welcomeModule .middle .right p {
+  margin-top: 1vw;
+  font-weight: lighter;
+  font-style: italic;
+}
+body main .welcomeModule .middle .right img {
+  width: 40vw;
+}
+body main .special {
+  margin: 4vw 5vw 2vw 5vw;
+}
+body main .special .head {
+  font-size: 4vw;
+  text-align: center;
+}
+body main .special .blocks {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 2vw;
+  justify-content: space-between;
+}
+body main .special .blocks .block {
+  width: 40vw;
+  border: 0.01vw solid rgba(255, 255, 255, 0.5);
+  border-radius: 1vw;
+  background: rgb(0, 62, 173);
+  background: rgb(21, 40, 73);
+  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2vw;
+  text-align: center;
+}
+body main .special .blocks .block .f1 {
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+body main .doctorInLeft {
+  margin: 2vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .doctorInLeft img {
+  width: 40vw;
+  margin-right: 5vw;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+body main .doctorInLeft .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+}
+body main .doctorInLeft .text .name {
+  font-size: 3vw;
+}
+body main .doctorInLeft .text .position {
+  margin: 3vw 0;
+  width: 30vw;
+}
+body main .doctorInLeft .text .btn {
+  background-color: rgb(21, 40, 73);
+  margin-top: 2vw;
+  padding: 1vw 3vw;
+  font-size: 1.5vw;
+}
+body main .doctorInLeft:nth-child(even) img {
+  margin: 0;
+  margin-left: 5vw;
+}
+body main .mapBlock {
+  height: 60vw;
+  position: relative;
+}
+body main .mapBlock .map img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 60vw;
+  filter: brightness(30%);
+}
+body main .mapBlock .text {
+  margin-top: 4vw;
+  padding: 2vw;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .mapBlock .text .f1 {
+  font-size: 4vw;
+}
+body main .mapBlock .text p {
+  margin-bottom: 2vw;
+  font-size: 2vw;
+  width: 70%;
+}
+body main .mapBlock .text .btn {
+  background-color: rgb(21, 40, 73);
+  color: white;
+  padding: 1vw 4vw;
+  font-size: 2vw;
+}
+body main .blockHead {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2vw 0;
+  margin: 2vw 0;
+}
+body main .blockHead .f1 {
+  font-size: 4vw;
+}
+body main .blockHead .f2 {
+  font-size: 2vw;
+}
+body footer {
+  padding: 2vw 5vw;
+  border-top: 0.1vw solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body footer p {
+  margin: 0.5vw 0;
+}/*# sourceMappingURL=style.css.map */

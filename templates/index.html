@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block main %}
+    {% include 'addons/header.html' %}
+    <main>
+        <div class="firstModule" id="main">
+            <p class="f1">Our Emergency Dentists Treat Urgent Dental Health Issues</p>
+            <p class="f2">We Can Help When You Need It Most</p>
+            <p class="f3">Our dentists can address all types of dental emergencies and have a 24/7 call center in place. Contact BrightDent Studio if you experience an emergency such as:</p>
+            <div class="block">
+                <p>&#9679; A knocked-out tooth</p>
+                <p>&#9679; A chipped tooth that is painful</p>
+                <p>&#9679; A persistent toothache</p>
+                <p>&#9679; A crown or veneer that comes loose</p>
+            </div>
+            <a href="tel:+1-703-555-5555" class="btn">Call: +1-703-555-5555</a>
+        </div>
+        <div class="welcomeModule">
+            <div class="head">
+                <p class="f1">Welcome to BrightDent Studio</p>
+                <p>Compassionate Dentists Serving the Entire Community</p>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <p>Established in 1986, BrightDent Studio offers comprehensive dentistry for all members of your household. Whether you need a routine checkup and cleaning or help with a dental health emergency, our dentists have you covered.</p>
+                    <br>
+                    <p>Our BrightDent office is equipped with state-of-the-art technology so we can accurately diagnose conditions and develop custom treatment plans that emphasize conservative, cost-reducing procedures whenever possible. In addition, our facility was designed for full accessibility for patients with disabilities. Our dentists and dental staff prioritize effective communication and can speak English, Spanish, Czech, Farsi, Mandarin, Cantonese, Bulgarian, and Finnish.</p>
+                </div>
+                <div class="right">
+                    <img src="https://einstein-clients.imgix.net/4213/151829/original_front-desk2.JPG?fit=crop&auto=format&w=600">
+                    <p>We always do our best to make sure everyone feels welcome. Whenever you come to our BrightDent office, our team will make sure you feel like part of the family.</p>
+                </div>
+            </div>
+        </div>
+        <div class="special">
+            <div class="head">
+                <p>What Sets BrightDent Studio Apart</p>
+            </div>
+            <div class="blocks">
+                <div class="block">
+                    <p class="f1">Patient Accessibility</p>
+                    <p class="f2">Fairfax Family Dental Care was designed to accommodate patients with disabilities. Thanks to this focus on accessibility, our office is able to welcome and meet the diverse health needs of all members of the community.</p>
+                </div>
+                <div class="block">
+                    <p class="f1">Reduced Need for Referrals</p>
+                    <p class="f2">Our dentists have advanced training in specialized areas of dentistry, including orthodontics and implant dentistry. Our multidisciplinary approach allows patients to receive care under one roof rather than relying on referrals.</p>
+                </div>
+                <div class="block">
+                    <p class="f1">Advanced Technology</p>
+                    <p class="f2">Our Fairfax practice invests in the latest dental technology. Our advanced X-ray system and sophisticated cone beam scanner both improve treatment and allow us to identify oral health problems before they escalate.</p>
+                </div>
+                <div class="block">
+                    <p class="f1">Affordability</p>
+                    <p class="f2">BrightDent Studio works hard to keep prices reasonable. If costs are an obstacle, we accept most insurances as well as financing through CareCredit®, which splits payments so they fit into monthly budgets.</p>
+                </div>
+            </div>
+        </div>
+        <div class="welcomeModule">
+            <div class="head">
+                <p class="f1">​Free Consultations for New Patients</p>
+                <p>Book an Appointment Today</p>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <p>Our dentists welcome new patients from all over the greater Fairfax, VA, area. Consultations are free for first-time guests of Fairfax Family Dental Care so we can get to know your smile before suggesting any treatment options. (Note: the use of dental X-rays and CBCT imaging during a visit may incur a fee.)</p>
+                    <br>
+                    <p>This complimentary consultation is a chance for you to get a sense of what Fairfax Family Dental Care has to offer. We look forward to your visit.</p>
+                    <br>
+                    <p>To set up an appointment, contact our Fairfax dental office online. You can also give our office a call at:</p>
+                    <br>
+                </div>
+                <div class="right">
+                    <img src="https://einstein-clients.imgix.net/4213/302391/original_Fairfax_Family_Dental_Care.JPG?fit=crop&auto=format&w=800">
+                </div>
+            </div>
+        </div>
+        <div class="doctorInLeft">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*">
+            <div class="text">
+                <p class="name">Charles Kirksey, DDS</p>
+                <p class="position">Dr. Charles D. Kirksey has provided dental care to the community of Fairfax, VA, for over 35 years. His experience and skill set help patients maximize the appearance of their smiles through general dentistry, orthodontics, oral surgery, and dental implants. Dr. Kirksey can help you achieve straighter teeth and an optimal bite.</p>
+                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Charles Kirksey</a>
+            </div>
+        </div>
+        <div class="doctorInLeft">
+            <div class="text">
+                <p class="name">Milan Simanek, DDS</p>
+                <p class="position">As a member of both the American Orthodontic Society and the International Association for Orthodontics, Dr. Simanek's continuing education has earned him a number of certificates, credentials, and awards in the field. Dr. Simanek can help English, Spanish, and Czech-speaking patients at our Fairfax, VA, dental office.</p>
+                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Milan Simanek</a>
+            </div>
+            <img src="{% static 'media/doc1.jpg' %}">
+        </div>
+        <div class="doctorInLeft">
+            <img src="{% static 'media/doc2.jpg' %}">
+            <div class="text">
+                <p class="name">Touraj Kamali, DDS</p>
+                <p class="position">Dr. Kamali knows that in order to provide patients with the highest level of dental care, it is important to participate in continuing education. He takes advantage of the latest developments in dental technology and innovative techniques so that you can experience the life-changing benefits of restorative and cosmetic treatments.</a>
+                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Touraj Kamali</a>
+            </div>
+        </div>
+        <div class="mapBlock">
+            <div class="map"><img src="{% static 'media/clinic1.jpg' %}"></div>
+            <div class="text">
+                <p class="f1">Our Dentists Will Put You at Ease</p>
+                <p>A Patient Shares Her Story</p>
+                <p>My parents were visiting from out of town and my father mentioned severe tooth pain so we called and got an appt for early the next morning.</p>
+                <p>Dr. Kamali and the entire staff were incredibly kind and professional to my father who was very nervous they would lecture or judge him based on the state of the tooth. They made him comfortable and worked swiftly to relieve his pain. Thank you!</p>
+                <p>-Patricia Simpson Rausch</p>
+                <a href="{% url 'index' %}" class="btn">Location on Google Maps</a>
+            </div>
+        </div>
+        <div class="blockHead">
+            <p class="f1">Our Featured</p>
+            <p class="f2">Dental Care Services</p>
+        </div>
+        <div class="doctorInLeft">
+            <div class="text">
+                <p class="name">Dental Implants</p>
+                <p class="position">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
+                <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+            </div>
+            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
+        </div>
+        <div class="doctorInLeft">
+            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344349/original.jpg?1613416413&fit=crop">
+            <div class="text">
+                <p class="name">Orthodontics</p>
+                <p class="position">Our friendly dentistry practice offers a number of traditional and innovative orthodontic treatments to best suit the needs and goals of our patients. We have solutions to effectively straighten crooked teeth, correct your bite, and address other misalignment concerns. If you are interested in how you can benefit from a straighter smile, our dentists will gladly discuss your options at your next dental appointment.</a>
+                <a href="{% url 'index' %}" class="btn">Learn More About Orthodontics</a>
+            </div>
+        </div>
+        <div class="doctorInLeft">
+            <div class="text">
+                <p class="name">Invisalign</p>
+                <p class="position">Many patients would like a straighter smile but hesitate due to the thought of wearing metal braces. Invisalign® is the perfect solution for these patients. The discreet clear plastic aligner trays of the Invisalign system allow for greater comfort and no dental hygiene or dietary restrictions. There are limitations to candidacy, but for those who qualify, Invisalign offers a nearly invisible treatment option.</p>
+                <a href="{% url 'index' %}" class="btn">Learn More About Invisalign</a>
+            </div>
+            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344351/original.jpg?1613416424&fit=crop">
+        </div>
+        <div class="doctorInLeft">
+            <img src="https://einstein-assets.imgix.net/AllOn4-Dentures-1780338620.jpg?h=1000&fit=crop&fp-x=0.4&fit=crop&auto=format&w=1000">
+            <div class="text">
+                <p class="name">Dentures</p>
+                <p class="position">If missing or failing teeth have robbed you of the joys of eating, speaking, and smiling, Fairfax Family Dental Care has the answer. We offer traditional removable dentures, partial dentures, and incredibly lifelike implant-supported dentures that remain fixed in your mouth and keep your jawbone strong. You'll never be embarrassed again by dentures that slip at an inopportune time.</a>
+                <a href="{% url 'index' %}" class="btn">Learn More About Dentures</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

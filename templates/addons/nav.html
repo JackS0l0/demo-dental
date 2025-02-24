@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+<div class="navbarBlock">
+    <div class="float1">
+        <span>
+            <a href="{% url 'index' %}" class="logo"><img src="{% static 'media/logo.svg' %}">BrightDent Studio</a>
+        </span>
+        <span>
+            <a href="{% url 'index' %}" class="left">Blog</a>
+            <a href="{% url 'index' %}" class="left">Contact</a>
+            <a href="{% url 'index' %}" class="left">Abous us</a>
+            <div class="dropdown">
+                <a class="btnmenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'media/menu.svg' %}"></a>
+                <ul class="dropdown-menu">
+                    <div class="menuContent">
+                        <div class="block">
+                            <p>Cosmetic</p>
+                            <a href="{% url 'index' %}">Cosmetic Dentistry</a>
+                            <a href="{% url 'index' %}">Dental Bonding</a>
+                            <a href="{% url 'index' %}">Invisalign</a>
+                            <a href="{% url 'index' %}">Orthodontics</a>
+                            <a href="{% url 'index' %}">Veneers</a>
+                            <a href="{% url 'index' %}">Smile Makeover</a>
+                            <a href="{% url 'index' %}">Teeth Whitening</a>
+                        </div>
+                        <div class="block">
+                            <p>Restorative</p>
+                            <a href="{% url 'index' %}">Restorative Dentistry</a>
+                            <a href="{% url 'index' %}">Dental Bridges</a>
+                            <a href="{% url 'index' %}">Dental Crowns</a>
+                            <a href="{% url 'index' %}">Dental Implants</a>
+                            <a href="{% url 'index' %}">Dental Implants Cost</a>
+                            <a href="{% url 'index' %}">Dentures</a>
+                            <a href="{% url 'index' %}">Full Mouth Reconstruction</a>
+                            <a href="{% url 'index' %}">Root Canal</a>
+                        </div>
+                        <div class="block">
+                            <p>General</p>
+                            <a href="{% url 'index' %}">General Dentistry</a>
+                            <a href="{% url 'index' %}">Teeth Cleaning</a>
+                            <a href="{% url 'index' %}">Emergency Dentist</a>
+                            <a href="{% url 'index' %}">Gum Disease</a>
+                            <a href="{% url 'index' %}">Oral Cancer Screenings</a>
+                            <a href="{% url 'index' %}">Pediatric Dentistry</a>
+                            <a href="{% url 'index' %}">Sealants and Fluoride</a>
+                            <a href="{% url 'index' %}">TMJ</a>
+                        </div>
+                        <div class="block">
+                            <p>Oral Surgery</p>
+                            <a href="{% url 'index' %}">Oral Surgery</a>
+                            <a href="{% url 'index' %}">Bone Grafting</a>
+                            <a href="{% url 'index' %}">Gum Graft</a>
+                            <a href="{% url 'index' %}">Sinus Lift</a>
+                            <a href="{% url 'index' %}">Tooth Extraction</a>
+                            <a href="{% url 'index' %}">Wisdom Teeth Removal</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </span>
+    </div>
+</div>
