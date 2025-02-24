@@ -1,7 +1,91 @@
 {% load static %}
 {% load i18n %}
 <footer>
-    <p>*Disclaimer: results are not guaranteed, may not be permanent, and can vary per individual. Some images are of models, not actual patients.</p>
-    <p>All rights reserved by Javidan Babayev &copy; {% now 'Y' %}</p>
-    <p>Sitemap | Privacy Policy | Terms of Use</p>
+    <div class="float1">
+        <div class="background"></div>
+        <div class="context">
+            <div class="left">
+                <img src="https://einstein-clients.imgix.net/4213/434292/original.jpg?1687989133=&auto=format&fit=max&w=524">
+            </div>
+            <div class="right">
+                <p class="name">Fairfax Family Dental Care</p>
+                <p>Our team of compassionate dental professionals uses state-of-the-art technology for every procedure we offer. As the premier emergency dentists in Fairfax, we are here to offer relief at any time of day or night, seven days a week. Our dentists are affiliated with professional associations including:</p>
+                <div class="girdBlock">
+                    <p>&#9679; American Dental Association</p>
+                    <p>&#9679; American Academy of Implant Dentistry</p>
+                    <p>&#9679; The American Orthodontic Society</p>
+                    <p>&#9679; Virginia Dental Association</p>
+                </div>
+                <p>To schedule an appointment or receive immediate dental care, call: (703) 385-0303 or contact us online.</p>
+            </div>
+        </div>
+    </div>
+    <div class="address">
+        <div class="left">
+            <span>
+                <a href="{% url 'index' %}" class="name">Fairfax Office</a>
+            </span>
+            <span>
+                <p>10611 Judicial Dr</p>
+                <p>Fairfax, VA 22030</p>
+            </span>
+            <span>
+                <p>Open Today 7:00am - 7:00pm</p>
+            </span>
+            <span>
+                <p>Available by phone 24/7</p>
+            </span>
+            <a href="{% url 'index' %}" class="btn">About Our Office</a>
+            <a href="{% url 'index' %}" class="btn">Directions</a>
+            <a href="{% url 'index' %}" class="btn">(703) 385-0303</a>
+        </div>
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24295.027595495205!2d49.93581712245942!3d40.433690330736226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403062161747cdad%3A0xe9a8c7815ced339f!2sStimul%20Hospital!5e0!3m2!1sen!2saz!4v1740434705606!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="contactWithUs">
+        <div class="background"></div>
+        <div class="contactFrom">
+            <div class="head">
+                <p>Contact Us Today</p>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <form action="">
+                        <span>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="">
+                        </span>
+                        <span>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="">
+                        </span>
+                        <span>
+                            <label for="phone">Phone</label>
+                            <input type="number" name="phone" id="">
+                        </span>
+                        <span>
+                            <label for="mess">Message</label>
+                            <textarea name="mess" id=""></textarea>
+                        </span>
+                    </form>
+                </div>
+                <div class="right">
+                    <p>"Let me tell you, as much as I fear dental work, Fairfax Family Dental Care has put my mind at ease with my fears. So, if you are like I was when it came to dental fears, do not worry. This is the place to go to finally take care of your dental problems." - Tim R.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="share">
+        <p>Rate, Review & Explore</p>
+        <a href="#"><img src="{% static 'media/g.png' %}"></a>
+        <a href="#"><img src="{% static 'media/f.png' %}"></a>
+        <a href="#"><img src="{% static 'media/x.png' %}"></a>
+
+    </div>
+    <div class="float0">
+        <p>*Disclaimer: results are not guaranteed, may not be permanent, and can vary per individual. Some images are of models, not actual patients.</p>
+        <p>All rights reserved by Javidan Babayev &copy; {% now 'Y' %}</p>
+        <p>Sitemap | Privacy Policy | Terms of Use</p>
+    </div>
 </footer>
