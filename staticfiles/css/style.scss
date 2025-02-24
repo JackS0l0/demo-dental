@@ -1,6 +1,6 @@
 @font-face {
-    font-family: monomakhRegular;
-    src: url(../font/Monomakh-Regular.ttf);
+    font-family: muli;
+    src: url(../font/MuliLight-lg9VZ.ttf);
 }
 *{
     margin: 0;
@@ -18,6 +18,7 @@ body{
     p{
         margin: 0;
     }
+    font-size: 1.3vw;
     a{
         text-decoration: none;
         color: white;
@@ -25,12 +26,13 @@ body{
     .btn{
         color: white;
     }
-    font-family: monomakhRegular;
-    background: rgb(21,40,73);
-    background: linear-gradient(125deg, rgba(21,40,73,1) 35%, rgba(3,5,31,1) 100%);
-    background-attachment: fixed;
+    font-family: muli;
+    background: #223695;
     .navbarBlock{
-        padding: 2vw 5vw;
+        padding: 2.5vw 3.5vw;
+        position: relative;
+        z-index: 99999;
+        background-color: #223695;
         .float1{
             display: flex;
             align-items: center;
@@ -40,109 +42,119 @@ body{
                 align-items: center;
                 .dropdown{
                     .btnmenu{
-                        img{
-                            width: 2vw;
+                        color: #62b2fd;
+                        margin-left: 2vw;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.3vw;
+                        i{
+                            font-size: 1.6vw;
                         }
-                        margin-left: 1vw;
                     }
                     .dropdown-menu{
-                        width: 90vw;
+                        width: 100vw;
                         border-radius: 0;
-                        border: 0.1vw solid white;
-                        background: rgb(0,62,173);
-                        background: rgb(21,40,73);
-                        background: linear-gradient(125deg, rgba(21,40,73,0.2) 35%, rgba(3,5,31,0.2) 100%);
+                        border: 0;
+                        background: #223695;
                         backdrop-filter: blur(5px);
                         -webkit-backdrop-filter: blur(5px);
-                        inset: 5vw 0 auto auto !important;
+                        inset: 4.5vw 1vw auto auto !important;
                         padding: 2vw;
+                        transform: translate3d(60px, 28px, 0px) !important; 
                         .menuContent{
                             display: grid;
-                            grid-template-columns: auto auto auto auto;
+                            grid-template-columns: auto auto auto auto auto;
+                            gap: 1vw;
                             .block{
                                 display: flex;
                                 flex-direction: column;
                                 text-align: center;
-                                border-right: 0.1vw solid white;
                                 p{
-                                    font-size: 3vw;
-                                    margin-bottom: 1vw;
+                                    font-size: 2vw;
+                                    margin-bottom: 2vw;
                                     color: white;
                                 }
                                 a{
                                     margin-bottom: 1vw;
-                                    color: white;
-                                    font-size: 1.6vw;
+                                    color: #62b2fd;
+                                    font-size: 1.3vw;
                                     transition: 1s;
+                                    padding-bottom: 1vw;
+                                    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.2);
                                 }
                                 a:hover{
                                     color: rgb(30,30,30);
                                 }
                             }
-                            .block:last-child{
-                                border-right: none;
+                        }
+                        .viewall{
+                            display: flex;
+                            justify-content: center;
+                            .seeall{
+                                font-size: 1.8vw;
+                                color: #62b2fd;
+                                text-transform: uppercase;
+                                font-weight: bold;
                             }
                         }
                     }
                 }
                 .logo{
-                    color: white;
-                    font-size: 2vw;
-                    font-weight: bold;
                     img{
                         margin-right: 1vw;
-                        width: 4vw;
+                        width: 27vw;
+                        transition: 2s;
                     }
                 }
                 .left{
-                    margin-left: 1vw;
-                    color: white;
-                    font-size: 1.6vw;
+                    margin-left: 2vw;
+                    color: #62b2fd;
+                    text-transform: uppercase;
+                    font-size: 1.3vw;
                 }
             }
         }
     }
     header{
         .headCarusel{
+            height: 80vh;
             position: relative;
-            div{
-                img{
-                    width: 100%;
-                    height: 86.6vh;
-                    object-fit: cover;
-                    filter: brightness(50%);
-                }
+            img{
+                width: 100%;
+                height: 80vh;
+                filter: brightness(80%);
+                object-fit: cover;
             }
         }
         .headText{
-            width: 100%;
             position: absolute;
-            bottom: 10vw;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            .discovery{
-                font-size: 2vw;
-                color: white;
-                border: 0.1vw solid white;
-                padding: 0.5vw 2vw;
-                border-radius: 0.5vw;
-                margin-top: 15vw;
-            }
+            bottom: 15vw;
+            text-align: end;
+            right: 5vw;
             .f1{
-                font-size: 4vw;
-                color: white;
+                font-size: 5vw;
             }
             .f2{
-                font-size: 3vw;
+                font-size: 2.7vw;
+                margin-bottom: 5vw;
+            }
+            .discovery{
+                background-color: #62b2fd;
                 color: white;
+                padding: 1.5vw 5vw;
+                border-radius: 5vw;
+                font-weight: bold;
             }
         }
     }
     main{
         min-height: 100vh;
+        background-image: url(../media/bk1.jpg);
+        background-size: cover;
+        background-attachment: fixed;
         .firstModule{
+            margin: 2vw 5vw;
             color: white;
             padding: 5vw 0 0 0;
             display: flex;
