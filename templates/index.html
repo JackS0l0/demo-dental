@@ -19,7 +19,7 @@
         <div class="welcomeModule">
             <div class="head">
                 <p class="f1">Welcome to BrightDent Studio</p>
-                <p>Compassionate Dentists Serving the Entire Community</p>
+                <p class="f2">Compassionate Dentists Serving the Entire Community</p>
             </div>
             <div class="middle">
                 <div class="left">
@@ -56,10 +56,10 @@
                 </div>
             </div>
         </div>
-        <div class="welcomeModule">
+        <div class="welcomeModule welcomeModulesecond">
             <div class="head">
                 <p class="f1">​Free Consultations for New Patients</p>
-                <p>Book an Appointment Today</p>
+                <p class="f2">Book an Appointment Today</p>
             </div>
             <div class="middle">
                 <div class="left">
@@ -77,32 +77,134 @@
                     <img src="https://einstein-clients.imgix.net/4213/302391/original_Fairfax_Family_Dental_Care.JPG?fit=crop&auto=format&w=800">
                 </div>
             </div>
-            <div class="request">
+            <div class="requestBtn">
                 <a href="{% url 'index' %}" class="btn">Request a Consultation</a>
             </div>
         </div>
-        <div class="doctorInLeft">
-            <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*">
-            <div class="text">
-                <p class="name">Charles Kirksey, DDS</p>
-                <p class="position">Dr. Charles D. Kirksey has provided dental care to the community of Fairfax, VA, for over 35 years. His experience and skill set help patients maximize the appearance of their smiles through general dentistry, orthodontics, oral surgery, and dental implants. Dr. Kirksey can help you achieve straighter teeth and an optimal bite.</p>
-                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Charles Kirksey</a>
+        <div class="googleReviewsBlock">
+            <div class="background"></div>
+            <div class="googleReviewBox">
+                <div class="head">
+                    <p class="f1">"Great experience!"</p>
+                    <p class="f2">Serving All of Fairfax County</p>
+                </div>
+                <div class="reviews">
+                    <div class="review">
+                        <div class="top">
+                            <div class="person">
+                                <div class="img">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg">
+                                </div>
+                                <div class="infoBlock">
+                                    <p class="name">Joe Biden</p>
+                                    <p class="date">November 11, 2021</p>
+                                    <div class="star">
+                                        <img src="https://images.squarespace-cdn.com/content/v1/53932edce4b04553a42663ee/1579282840809-25JXPZ0GW3GM9KOEDUAB/5-stars.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gimg">
+                                <img src="{% static 'media/google.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <p>I have been a client over 30 years. They have always done a great job and They offer emergency appointments on weekends which I consider a valuable service I have not found anywhere else.</p>
+                        </div>
+                        <div class="footer">
+                            <a href="{% url 'index' %}">View on Google</a>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top">
+                            <div class="person">
+                                <div class="img">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg">
+                                </div>
+                                <div class="infoBlock">
+                                    <p class="name">Joe Biden</p>
+                                    <p class="date">November 11, 2021</p>
+                                    <div class="star">
+                                        <img src="https://images.squarespace-cdn.com/content/v1/53932edce4b04553a42663ee/1579282840809-25JXPZ0GW3GM9KOEDUAB/5-stars.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gimg">
+                                <img src="{% static 'media/google.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <p>I have been a client over 30 years. They have always done a great job and They offer emergency appointments on weekends which I consider a valuable service I have not found anywhere else.</p>
+                        </div>
+                        <div class="footer">
+                            <a href="{% url 'index' %}">View on Google</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="doctorInLeft">
-            <div class="text">
-                <p class="name">Milan Simanek, DDS</p>
-                <p class="position">As a member of both the American Orthodontic Society and the International Association for Orthodontics, Dr. Simanek's continuing education has earned him a number of certificates, credentials, and awards in the field. Dr. Simanek can help English, Spanish, and Czech-speaking patients at our Fairfax, VA, dental office.</p>
-                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Milan Simanek</a>
+        <div class="doctorsBlock">
+            <div class="doctor">
+                <div class="relativeSide">
+                    <div class="img">
+                        <img src="{% static 'media/doc1.jpg' %}">
+                    </div>
+                    <div class="empty"></div>
+                </div>
+                <div class="info">
+                    <p class="name">Charles Kirksey, DDS</p>
+                    <p class="desc">Dr. Charles D. Kirksey has provided dental care to the community of Fairfax, VA, for over 35 years. His experience and skill set help patients maximize the appearance of their smiles through general dentistry, orthodontics, oral surgery, and dental implants. Dr. Kirksey can help you achieve straighter teeth and an optimal bite.</p>
+                    <div class="btnDetailView">
+                        <a href="{% url 'index' %}" class="btn">Discover More About Dr. Charles Kirksey</a>
+                    </div>
+                </div>
             </div>
-            <img src="{% static 'media/doc1.jpg' %}">
         </div>
-        <div class="doctorInLeft">
-            <img src="{% static 'media/doc2.jpg' %}">
-            <div class="text">
-                <p class="name">Touraj Kamali, DDS</p>
-                <p class="position">Dr. Kamali knows that in order to provide patients with the highest level of dental care, it is important to participate in continuing education. He takes advantage of the latest developments in dental technology and innovative techniques so that you can experience the life-changing benefits of restorative and cosmetic treatments.</a>
-                <a href="{% url 'index' %}" class="btn">Discover More About Dr. Touraj Kamali</a>
+        <div class="doctorsBlock doctorsBlocksecond">
+            <div class="doctor">
+                <div class="relativeSide">
+                    <div class="empty"></div>
+                    <div class="img">
+                        <img src="{% static 'media/doc1.jpg' %}">
+                    </div>
+                </div>
+                <div class="info">
+                    <p class="name">Charles Kirksey, DDS</p>
+                    <p class="desc">Dr. Charles D. Kirksey has provided dental care to the community of Fairfax, VA, for over 35 years. His experience and skill set help patients maximize the appearance of their smiles through general dentistry, orthodontics, oral surgery, and dental implants. Dr. Kirksey can help you achieve straighter teeth and an optimal bite.</p>
+                    <div class="btnDetailView">
+                        <a href="{% url 'index' %}" class="btn">Discover More About Dr. Charles Kirksey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="doctorsBlock">
+            <div class="doctor">
+                <div class="relativeSide">
+                    <div class="img">
+                        <img src="{% static 'media/doc1.jpg' %}">
+                    </div>
+                    <div class="empty"></div>
+                </div>
+                <div class="info">
+                    <p class="name">Charles Kirksey, DDS</p>
+                    <p class="desc">Dr. Charles D. Kirksey has provided dental care to the community of Fairfax, VA, for over 35 years. His experience and skill set help patients maximize the appearance of their smiles through general dentistry, orthodontics, oral surgery, and dental implants. Dr. Kirksey can help you achieve straighter teeth and an optimal bite.</p>
+                    <div class="btnDetailView">
+                        <a href="{% url 'index' %}" class="btn">Discover More About Dr. Charles Kirksey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="memberships">
+            <div class="head">
+                <p>Memberships and Affiliations</p>
+            </div>
+            <div class="logosBlock">
+                <a href="{% url 'index' %}" class="img"><img src="https://einstein-assets.imgix.net/American_Func_Ortho_White.png?h=208&fit=crop&auto=format&w=250"></a>
+                <a href="{% url 'index' %}" class="img"><img src="{% static 'media/partner.png' %}"></a>
+                <a href="{% url 'index' %}" class="img"><img src="https://einstein-assets.imgix.net/vdalogo.png?h=107&fit=crop&auto=format&w=250"></a>
+                
+                <a href="{% url 'index' %}" class="img"><img src="{% static 'media/partner.png' %}"></a>
+                <a href="{% url 'index' %}" class="img"><img src="https://einstein-assets.imgix.net/vdalogo.png?h=107&fit=crop&auto=format&w=250"></a>
+                <a href="{% url 'index' %}" class="img"><img src="https://einstein-assets.imgix.net/American_Func_Ortho_White.png?h=208&fit=crop&auto=format&w=250"></a>
             </div>
         </div>
         <div class="mapBlock">
@@ -116,40 +218,186 @@
                 <a href="{% url 'index' %}" class="btn">Location on Google Maps</a>
             </div>
         </div>
-        <div class="blockHead">
-            <p class="f1">Our Featured</p>
-            <p class="f2">Dental Care Services</p>
-        </div>
-        <div class="doctorInLeft">
-            <div class="text">
-                <p class="name">Dental Implants</p>
-                <p class="position">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
-                <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+        <div class="servicesBlock">
+            <div class="servicesHeadText">
+                <p class="f1">Our Featured</p>
+                <p class="f2">Dental Care Services</p>
             </div>
-            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
-        </div>
-        <div class="doctorInLeft">
-            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344349/original.jpg?1613416413&fit=crop">
-            <div class="text">
-                <p class="name">Orthodontics</p>
-                <p class="position">Our friendly dentistry practice offers a number of traditional and innovative orthodontic treatments to best suit the needs and goals of our patients. We have solutions to effectively straighten crooked teeth, correct your bite, and address other misalignment concerns. If you are interested in how you can benefit from a straighter smile, our dentists will gladly discuss your options at your next dental appointment.</a>
-                <a href="{% url 'index' %}" class="btn">Learn More About Orthodontics</a>
+            <div class="servies">
+                <div class="service">
+                    <a href="{% url 'index' %}" class="img">
+                        <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
+                    </a>
+                    <div class="info">
+                        <a href="{% url 'index' %}" class="name">Dental Implants</a>
+                        <p class="txt">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
+                        <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="info">
+                        <a href="{% url 'index' %}" class="name">Dental Implants</a>
+                        <p class="txt">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
+                        <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+                    </div>
+                    <a href="{% url 'index' %}" class="img">
+                        <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
+                    </a>
+                </div>
+                <div class="service">
+                    <a href="{% url 'index' %}" class="img">
+                        <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
+                    </a>
+                    <div class="info">
+                        <a href="{% url 'index' %}" class="name">Dental Implants</a>
+                        <p class="txt">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
+                        <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="info">
+                        <a href="{% url 'index' %}" class="name">Dental Implants</a>
+                        <p class="txt">A missing tooth can lead to serious health issues. The roots of a tooth stimulate the tissue in your jawbone, keeping it strong. When you lose a tooth, the lack of root structure causes your jawbone to deteriorate, leading to problems like further tooth loss and sunken facial features. Titanium or ceramic dental implants act as artificial tooth roots, effectively stopping further bone loss.</p>
+                        <a href="{% url 'index' %}" class="btn">Learn More About Dental Implants</a>
+                    </div>
+                    <a href="{% url 'index' %}" class="img">
+                        <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344347/original.jpg?1613416391&fit=crop">
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="doctorInLeft">
-            <div class="text">
-                <p class="name">Invisalign</p>
-                <p class="position">Many patients would like a straighter smile but hesitate due to the thought of wearing metal braces. Invisalign® is the perfect solution for these patients. The discreet clear plastic aligner trays of the Invisalign system allow for greater comfort and no dental hygiene or dietary restrictions. There are limitations to candidacy, but for those who qualify, Invisalign offers a nearly invisible treatment option.</p>
-                <a href="{% url 'index' %}" class="btn">Learn More About Invisalign</a>
+        <div class="serviesList">
+            <div class="head">
+                <p>Our Complete List of Services</p>
             </div>
-            <img src="https://s3.amazonaws.com/eii-lucid/assets/4213/344351/original.jpg?1613416424&fit=crop">
+            <div class="list">
+                <li><a href="{% url 'index' %}">Bone Grafts</a></li>
+                <li><a href="{% url 'index' %}">Dental Bonding</a></li>
+                <li><a href="{% url 'index' %}">Dental Bridges</a></li>
+                <li><a href="{% url 'index' %}">Dental Crowns</a></li>
+                <li><a href="{% url 'index' %}">Dental Implants</a></li>
+                <li><a href="{% url 'index' %}">Dentures</a></li>
+                <li><a href="{% url 'index' %}">Emergency Dentistry</a></li>
+                <li><a href="{% url 'index' %}">Enamel Shaping</a></li>
+                <li><a href="{% url 'index' %}">Exams and Cleanings</a></li>
+                <li><a href="{% url 'index' %}">Fillings</a></li>
+                <li><a href="{% url 'index' %}">Full Mouth Reconstruction</a></li>
+                <li><a href="{% url 'index' %}">Oral Appliance Therapy</a></li>
+                <li><a href="{% url 'index' %}">Oral Cancer Screenings</a></li>
+                <li><a href="{% url 'index' %}">Orthodontics</a></li>
+                <li><a href="{% url 'index' %}">Partial Dentures</a></li>
+                <li><a href="{% url 'index' %}">Pediatric Dentistry</a></li>
+                <li><a href="{% url 'index' %}">Periodontal Treatment</a></li>
+                <li><a href="{% url 'index' %}">Porcelain Crowns</a></li>
+                <li><a href="{% url 'index' %}">​Porcelain Veneers</a></li>
+                <li><a href="{% url 'index' %}">Root Canal Therapy</a></li>
+                <li><a href="{% url 'index' %}">Sealants and Fluoride Treatments</a></li>
+                <li><a href="{% url 'index' %}">Sinus Lifts</a></li>
+                <li><a href="{% url 'index' %}">Smile Makeover</a></li>
+                <li><a href="{% url 'index' %}">Soft Tissue Grafts</a></li>
+                <li><a href="{% url 'index' %}">Teeth Whitening</a></li>
+                <li><a href="{% url 'index' %}">Temporomandibular Joint (TMJ) Treatment</a></li>
+                <li><a href="{% url 'index' %}">Tooth Extractions</a></li>
+                <li><a href="{% url 'index' %}">Wisdom Tooth Removal</a></li>
+            </div>
         </div>
-        <div class="doctorInLeft">
-            <img src="https://einstein-assets.imgix.net/AllOn4-Dentures-1780338620.jpg?h=1000&fit=crop&fp-x=0.4&fit=crop&auto=format&w=1000">
-            <div class="text">
-                <p class="name">Dentures</p>
-                <p class="position">If missing or failing teeth have robbed you of the joys of eating, speaking, and smiling, Fairfax Family Dental Care has the answer. We offer traditional removable dentures, partial dentures, and incredibly lifelike implant-supported dentures that remain fixed in your mouth and keep your jawbone strong. You'll never be embarrassed again by dentures that slip at an inopportune time.</a>
-                <a href="{% url 'index' %}" class="btn">Learn More About Dentures</a>
+        <div class="request">
+            <div class="background"></div>
+            <div class="context">
+                <div class="head">
+                    <p class="f1">Not Your Average Dentists</p>
+                    <p class="f2">All the Dentistry You Need Under One Roof</p>
+                </div>
+                <div class="txt">
+                    <p>Fairfax Family Dental Care offers comprehensive dental services so we can address all of our patients' needs under one roof. It's helped us build strong relationships within the community that last to this day. Whether you want a brighter smile or need to fix a damaged tooth with a custom dental crown, you can get all the care you need from dentists you trust. Contact our Fairfax, VA, dental office or give us a call to set up your next visit.</p>
+                </div>
+                <div class="links">
+                    <a href="{% url 'index' %}" class="tel">(703) 385-0303</a>
+                    <a href="{% url 'index' %}" class="btn">Request a Consultation</a>
+                </div>
+            </div>
+        </div>
+        <div class="googleReviewsBlock">
+            <div class="background"></div>
+            <div class="googleReviewBox">
+                <div class="head">
+                    <p class="f1">"Great experience!"</p>
+                    <p class="f2">Serving All of Fairfax County</p>
+                </div>
+                <div class="reviews">
+                    <div class="review">
+                        <div class="top">
+                            <div class="person">
+                                <div class="img">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg">
+                                </div>
+                                <div class="infoBlock">
+                                    <p class="name">Joe Biden</p>
+                                    <p class="date">November 11, 2021</p>
+                                    <div class="star">
+                                        <img src="https://images.squarespace-cdn.com/content/v1/53932edce4b04553a42663ee/1579282840809-25JXPZ0GW3GM9KOEDUAB/5-stars.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gimg">
+                                <img src="{% static 'media/google.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <p>I have been a client over 30 years. They have always done a great job and They offer emergency appointments on weekends which I consider a valuable service I have not found anywhere else.</p>
+                        </div>
+                        <div class="footer">
+                            <a href="{% url 'index' %}">View on Google</a>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top">
+                            <div class="person">
+                                <div class="img">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/800px-Joe_Biden_presidential_portrait.jpg">
+                                </div>
+                                <div class="infoBlock">
+                                    <p class="name">Joe Biden</p>
+                                    <p class="date">November 11, 2021</p>
+                                    <div class="star">
+                                        <img src="https://images.squarespace-cdn.com/content/v1/53932edce4b04553a42663ee/1579282840809-25JXPZ0GW3GM9KOEDUAB/5-stars.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gimg">
+                                <img src="{% static 'media/google.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <p>I have been a client over 30 years. They have always done a great job and They offer emergency appointments on weekends which I consider a valuable service I have not found anywhere else.</p>
+                        </div>
+                        <div class="footer">
+                            <a href="{% url 'index' %}">View on Google</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lastesBlog">
+            <div class="head">
+                <p class="f1">Read the Latest from Our Blog</p>
+                <p class="f2">Posts From Our Dental Care Team</p>
+            </div>
+            <div class="blog">
+                <div class="article">
+                    <p class="date">August 16, 2024</p>
+                    <a href="{% url 'index' %}">Do I Have Gum Disease? Look for These Symptoms and</a>
+                </div>
+                <div class="line"></div>
+                <div class="article">
+                    <p class="date">August 16, 2024</p>
+                    <a href="{% url 'index' %}">Do I Need New Dentures: Signs it's Time to Get</a>
+                </div>
+                <div class="line"></div>
+                <div class="article">
+                    <p class="date">August 16, 2024</p>
+                    <a href="{% url 'index' %}">Do I Have Gum Disease? Look for These Symptoms and</a>
+                </div>
             </div>
         </div>
     </main>

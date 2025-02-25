@@ -1,6 +1,6 @@
 @font-face {
-  font-family: monomakhRegular;
-  src: url(../font/Monomakh-Regular.ttf);
+  font-family: muli;
+  src: url(../font/MuliLight-lg9VZ.ttf);
 }
 * {
   margin: 0;
@@ -17,10 +17,9 @@ html {
 
 body {
   color: white;
-  font-family: monomakhRegular;
-  background: rgb(21, 40, 73);
-  background: linear-gradient(125deg, rgb(21, 40, 73) 35%, rgb(3, 5, 31) 100%);
-  background-attachment: fixed;
+  font-size: 1.3vw;
+  font-family: muli;
+  background: #223695;
 }
 body p {
   margin: 0;
@@ -32,8 +31,30 @@ body a {
 body .btn {
   color: white;
 }
+body #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  z-index: 99;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: 2s;
+}
+body #myBtn i {
+  font-size: 2.5vw;
+}
+body #myBtn:hover {
+  color: #62b2fd;
+}
 body .navbarBlock {
-  padding: 2vw 5vw;
+  padding: 2.5vw 3.5vw;
+  position: relative;
+  z-index: 99999;
+  background-color: #223695;
 }
 body .navbarBlock .float1 {
   display: flex;
@@ -45,143 +66,287 @@ body .navbarBlock .float1 span {
   align-items: center;
 }
 body .navbarBlock .float1 span .dropdown .btnmenu {
-  margin-left: 1vw;
+  color: #62b2fd;
+  margin-left: 2vw;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 1.3vw;
 }
-body .navbarBlock .float1 span .dropdown .btnmenu img {
-  width: 2vw;
+body .navbarBlock .float1 span .dropdown .btnmenu i {
+  font-size: 1.6vw;
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu {
-  width: 90vw;
+  width: 100vw;
   border-radius: 0;
-  border: 0.1vw solid white;
-  background: rgb(0, 62, 173);
-  background: rgb(21, 40, 73);
-  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
+  border: 0;
+  background: #223695;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  inset: 5vw 0 auto auto !important;
+  inset: 4.5vw 1vw auto auto !important;
   padding: 2vw;
+  transform: translate3d(60px, 28px, 0px) !important;
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 1vw;
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-right: 0.1vw solid white;
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block p {
-  font-size: 3vw;
-  margin-bottom: 1vw;
+  font-size: 2vw;
+  margin-bottom: 2vw;
   color: white;
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block a {
   margin-bottom: 1vw;
-  color: white;
-  font-size: 1.6vw;
+  color: #62b2fd;
+  font-size: 1.3vw;
   transition: 1s;
+  padding-bottom: 1vw;
+  border-bottom: 0.1vw solid rgba(255, 255, 255, 0.2);
 }
 body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block a:hover {
-  color: rgb(30, 30, 30);
-}
-body .navbarBlock .float1 span .dropdown .dropdown-menu .menuContent .block:last-child {
-  border-right: none;
-}
-body .navbarBlock .float1 span .logo {
   color: white;
-  font-size: 2vw;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .viewall {
+  display: flex;
+  justify-content: center;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .viewall .seeall {
+  font-size: 1.8vw;
+  color: #62b2fd;
+  text-transform: uppercase;
   font-weight: bold;
+  transition: 1s;
+}
+body .navbarBlock .float1 span .dropdown .dropdown-menu .viewall .seeall:hover {
+  color: white;
 }
 body .navbarBlock .float1 span .logo img {
   margin-right: 1vw;
-  width: 4vw;
+  width: 27vw;
+  transition: 2s;
 }
 body .navbarBlock .float1 span .left {
-  margin-left: 1vw;
+  margin-left: 2vw;
+  color: #62b2fd;
+  text-transform: uppercase;
+  font-size: 1.3vw;
+  transition: 1s;
+}
+body .navbarBlock .float1 span .left:hover {
   color: white;
-  font-size: 1.6vw;
 }
 body header .headCarusel {
   position: relative;
 }
-body header .headCarusel div img {
+body header .headCarusel img {
   width: 100%;
-  height: 86.6vh;
+  height: 80vh;
+  filter: brightness(80%);
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(50%);
 }
 body header .headText {
-  width: 100%;
   position: absolute;
-  bottom: 10vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-body header .headText .discovery {
-  font-size: 2vw;
-  color: white;
-  border: 0.1vw solid white;
-  padding: 0.5vw 2vw;
-  border-radius: 0.5vw;
-  margin-top: 15vw;
+  bottom: 15vw;
+  text-align: end;
+  right: 5vw;
 }
 body header .headText .f1 {
-  font-size: 4vw;
-  color: white;
+  font-size: 5vw;
 }
 body header .headText .f2 {
-  font-size: 3vw;
+  font-size: 2.7vw;
+  margin-bottom: 5vw;
+}
+body header .headText .discovery {
+  background-color: #62b2fd;
   color: white;
+  padding: 1.5vw 5vw;
+  border-radius: 5vw;
+  font-weight: bold;
 }
 body main {
   min-height: 100vh;
+  background-image: url(../media/bk1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body main .lastesBlog {
+  padding: 10vw 0;
+}
+body main .lastesBlog .head {
+  font-size: 4.5vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vw;
+  word-spacing: 0.4vw;
+  font-weight: bold;
+  flex-direction: column;
+}
+body main .lastesBlog .head .f2 {
+  font-size: 2vw;
+  color: #62b2fd;
+}
+body main .lastesBlog .blog {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .lastesBlog .blog .line {
+  width: 0.1vw;
+  height: 100%;
+  border-right: 0.1vw solid white;
+}
+body main .lastesBlog .blog .article {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  text-align: center;
+}
+body main .lastesBlog .blog .article .date {
+  font-weight: bold;
+}
+body main .lastesBlog .blog .article a {
+  font-size: 1.8vw;
+  color: #62b2fd;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+}
+body main .memberships {
+  margin: 2vw 5vw;
+  padding: 5vw 0;
+}
+body main .memberships .head {
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
+}
+body main .memberships .logosBlock {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 2vw;
+  margin-top: 4vw;
+  justify-content: space-between;
+}
+body main .memberships .logosBlock .img {
+  overflow: hidden;
+  padding: 1vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .memberships .logosBlock .img img {
+  width: 15vw;
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .doctorsBlock .doctor {
+  position: relative;
+}
+body main .doctorsBlock .doctor .relativeSide {
+  display: flex;
+}
+body main .doctorsBlock .doctor .relativeSide .img img {
+  width: 49.45vw;
+  height: 55vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+body main .doctorsBlock .doctor .relativeSide .empty {
+  width: 50vw;
+  height: 55vw;
+  background-color: #070C24;
+}
+body main .doctorsBlock .doctor .info {
+  top: 2vw;
+  padding: 5vw;
+  width: 50vw;
+  height: 50vw;
+  right: 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #223695;
+  position: absolute;
+}
+body main .doctorsBlock .doctor .info .name {
+  text-align: center;
+  font-size: 5vw;
+}
+body main .doctorsBlock .doctor .info .btnDetailView {
+  display: flex;
+  justify-content: center;
+}
+body main .doctorsBlock .doctor .info .btnDetailView .btn {
+  font-weight: bold;
+  padding: 1vw 2vw;
+  border-radius: 5vw;
+  background: #62b2fd;
+  margin-top: 2vw;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .doctorsBlocksecond .doctor .info {
+  left: 10vw;
 }
 body main .firstModule {
+  margin: 0 5vw;
   color: white;
   padding: 5vw 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-body main .firstModule p {
-  margin-bottom: 2vw;
 }
 body main .firstModule .f1 {
-  font-size: 4vw;
+  text-align: center;
+  font-size: 4.5vw;
+  font-weight: bold;
 }
 body main .firstModule .f2 {
   font-size: 2vw;
+  color: #62b2fd;
+  text-transform: uppercase;
+  margin-bottom: 3vw;
 }
 body main .firstModule .f3 {
   width: 60%;
+  margin-bottom: 2vw;
 }
 body main .firstModule .btn {
   margin-top: 5vw;
   color: white;
-  border-color: white;
-  font-size: 2vw;
+  background-color: #62b2fd;
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: 1.5vw 5vw;
+  border-radius: 5vw;
 }
 body main .firstModule .block {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 2vw;
+  -moz-column-gap: 8vw;
+       column-gap: 8vw;
+  text-align: start;
+  row-gap: 2vw;
 }
 body main .welcomeModule {
-  margin: 2vw 5vw;
+  margin: 5vw;
   color: white;
-  border: 0.01vw solid rgba(255, 255, 255, 0.5);
-  border-radius: 1vw;
-  background: rgb(0, 62, 173);
-  background: rgb(21, 40, 73);
-  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: #172869;
   padding: 2vw;
 }
 body main .welcomeModule .head {
@@ -194,6 +359,9 @@ body main .welcomeModule .head p {
 body main .welcomeModule .head .f1 {
   font-size: 4vw;
 }
+body main .welcomeModule .head .f2 {
+  color: #62b2fd;
+}
 body main .welcomeModule .middle {
   display: flex;
   align-items: start;
@@ -202,6 +370,15 @@ body main .welcomeModule .middle {
 }
 body main .welcomeModule .middle .left {
   width: 70%;
+}
+body main .welcomeModule .middle .left .tel {
+  text-align: center;
+}
+body main .welcomeModule .middle .left .tel .btn {
+  font-size: 2vw;
+  border-radius: 0;
+  border-bottom: 0.1vw solid #62b2fd;
+  color: #62b2fd;
 }
 body main .welcomeModule .middle .right {
   margin-left: 7vw;
@@ -219,11 +396,25 @@ body main .welcomeModule .middle .right p {
 body main .welcomeModule .middle .right img {
   width: 40vw;
 }
+body main .welcomeModule .requestBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vw;
+}
+body main .welcomeModule .requestBtn .btn {
+  padding: 1.5vw 5vw;
+  border-radius: 5vw;
+  background-color: #62b2fd;
+}
+body main .welcomeModulesecond {
+  margin: 0;
+}
 body main .special {
   margin: 4vw 5vw 2vw 5vw;
 }
 body main .special .head {
-  font-size: 4vw;
+  font-size: 5vw;
+  margin-bottom: 4vw;
   text-align: center;
 }
 body main .special .blocks {
@@ -234,13 +425,7 @@ body main .special .blocks {
 }
 body main .special .blocks .block {
   width: 40vw;
-  border: 0.01vw solid rgba(255, 255, 255, 0.5);
-  border-radius: 1vw;
-  background: rgb(0, 62, 173);
-  background: rgb(21, 40, 73);
-  background: linear-gradient(125deg, rgba(21, 40, 73, 0.2) 35%, rgba(3, 5, 31, 0.2) 100%);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: #172869;
   padding: 2vw;
   text-align: center;
 }
@@ -248,44 +433,90 @@ body main .special .blocks .block .f1 {
   font-size: 2vw;
   margin-bottom: 1vw;
 }
-body main .doctorInLeft {
-  margin: 2vw 5vw;
+body main .googleReviewsBlock {
+  position: relative;
+}
+body main .googleReviewsBlock .background {
+  height: 50vw;
+  background-image: url(../media/bk4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(70%);
+}
+body main .googleReviewsBlock .googleReviewBox {
+  width: 100%;
+  padding: 5vw 0;
+  top: 0;
+  position: absolute;
+}
+body main .googleReviewsBlock .googleReviewBox .head {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-body main .doctorInLeft img {
+body main .googleReviewsBlock .googleReviewBox .head .f1 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+body main .googleReviewsBlock .googleReviewBox .head .f2 {
+  font-size: 2vw;
+  text-transform: uppercase;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  margin: 2vw 5vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review {
+  background-color: white;
+  color: black;
   width: 40vw;
-  margin-right: 5vw;
-  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review a {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 0.2vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person {
+  display: flex;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .img {
+  margin-right: 1vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .img img {
+  border-radius: 100%;
+  width: 5vw;
+  height: 5vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
 }
-body main .doctorInLeft .text {
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: center;
-  text-align: center;
 }
-body main .doctorInLeft .text .name {
-  font-size: 3vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock .name {
+  font-weight: bold;
 }
-body main .doctorInLeft .text .position {
-  margin: 3vw 0;
-  width: 30vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock .star img {
+  width: 8vw;
 }
-body main .doctorInLeft .text .btn {
-  background-color: rgb(21, 40, 73);
-  margin-top: 2vw;
-  padding: 1vw 3vw;
-  font-size: 1.5vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .gimg img {
+  width: 3vw;
 }
-body main .doctorInLeft:nth-child(even) img {
-  margin: 0;
-  margin-left: 5vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .middle {
+  margin: 2vw 0;
 }
 body main .mapBlock {
   height: 60vw;
@@ -322,28 +553,293 @@ body main .mapBlock .text .btn {
   padding: 1vw 4vw;
   font-size: 2vw;
 }
-body main .blockHead {
+body main .servicesBlock {
+  padding: 5vw 0;
+}
+body main .servicesBlock .servicesHeadText {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 2vw 0;
-  margin: 2vw 0;
+  margin-bottom: 5vw;
 }
-body main .blockHead .f1 {
+body main .servicesBlock .servicesHeadText .f1 {
   font-size: 4vw;
 }
-body main .blockHead .f2 {
-  font-size: 2vw;
+body main .servicesBlock .servicesHeadText .f2 {
+  font-size: 2.5vw;
+  color: #62b2fd;
 }
-body footer {
-  padding: 2vw 5vw;
-  border-top: 0.1vw solid white;
+body main .servicesBlock .servies .service {
+  display: flex;
+  justify-content: space-between;
+}
+body main .servicesBlock .servies .service .img img {
+  width: 49.4vw;
+  height: 49.4vw;
+}
+body main .servicesBlock .servies .service .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 5vw;
   text-align: center;
 }
-body footer p {
-  margin: 0.5vw 0;
+body main .servicesBlock .servies .service .info .name {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #62b2fd;
+}
+body main .servicesBlock .servies .service .info .txt {
+  margin: 2vw 0;
+}
+body main .servicesBlock .servies .service .info .btn {
+  background-color: #62b2fd;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
+}
+body main .serviesList {
+  background-color: #172869;
+  margin: 2vw 5vw;
+  padding: 5vw 0;
+}
+body main .serviesList .head {
+  display: flex;
+  justify-content: center;
+  font-size: 3vw;
+}
+body main .serviesList .list {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  row-gap: 1vw;
+  margin: 2vw 0;
+}
+body main .serviesList .list a {
+  color: #62b2fd;
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+}
+body main .request {
+  position: relative;
+  height: 50vw;
+}
+body main .request .background {
+  height: 50vw;
+  background-image: url(../media/bk3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body main .request .context {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5vw 0;
+}
+body main .request .context .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .request .context .head .f1 {
+  font-size: 4vw;
+}
+body main .request .context .head .f2 {
+  font-size: 2.5vw;
+  color: #62b2fd;
+}
+body main .request .context .txt {
+  display: flex;
+  justify-content: center;
+  margin: 4vw 0;
+}
+body main .request .context .txt p {
+  width: 70%;
+}
+body main .request .context .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .request .context .links .tel {
+  margin-bottom: 2vw;
+  color: #62b2fd;
+  font-size: 2.5vw;
+}
+body main .request .context .links .btn {
+  background-color: #62b2fd;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
+}
+body footer {
+  background-image: url(../media/bk1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body footer .float1 {
+  position: relative;
+}
+body footer .float1 .background {
+  height: 40vw;
+  background-image: url(../media/bk3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body footer .float1 .context {
+  margin: 5vw 3vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  position: absolute;
+}
+body footer .float1 .context .left img {
+  margin-right: 2vw;
+  width: 20vw;
+}
+body footer .float1 .context .right p {
+  margin-bottom: 1vw;
+}
+body footer .float1 .context .right .name {
+  font-size: 4vw;
+}
+body footer .float1 .context .right .girdBlock {
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 2vw;
+       column-gap: 2vw;
+}
+body footer .address {
+  display: flex;
+  justify-content: space-between;
+}
+body footer .address .right iframe {
+  height: 100%;
+}
+body footer .address .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vw 0;
+  justify-content: center;
+  width: 100%;
+}
+body footer .address .left span {
+  margin-bottom: 1vw;
+}
+body footer .address .left span .name {
+  color: #62b2fd;
+  font-size: 2.5vw;
+}
+body footer .address .left .btn {
+  background-color: #62b2fd;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
+  margin: 1vw;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+body footer .contactWithUs {
+  position: relative;
+}
+body footer .contactWithUs .background {
+  background-image: url(../media/bk2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(80%);
+  height: 50vw;
+}
+body footer .contactWithUs .contactFrom {
+  padding: 2vw 5vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+body footer .contactWithUs .contactFrom .head {
+  font-size: 4vw;
+  margin-bottom: 2vw;
+  width: 30vw;
+  text-align: center;
+  font-weight: bold;
+}
+body footer .contactWithUs .contactFrom .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+body footer .contactWithUs .contactFrom .middle .right {
+  width: 50%;
+}
+body footer .contactWithUs .contactFrom .middle .left form {
+  display: flex;
+  flex-direction: column;
+}
+body footer .contactWithUs .contactFrom .middle .left form span {
+  margin-bottom: 1vw;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 0.5vw;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+body footer .contactWithUs .contactFrom .middle .left form span input {
+  outline: none;
+  background: none;
+  width: 30vw;
+  border: 0;
+}
+body footer .contactWithUs .contactFrom .middle .left form span input::-webkit-outer-spin-button,
+body footer .contactWithUs .contactFrom .middle .left form span input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body footer .contactWithUs .contactFrom .middle .left form span .input_field[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+body footer .contactWithUs .contactFrom .middle .left form span textarea {
+  background: none;
+  border: 0;
+  outline: none;
+  width: 30vw;
+  height: 10vw;
+  resize: none;
+}
+body footer .share {
+  display: flex;
+  justify-content: center;
+  padding: 5vw 0;
+  align-items: center;
+}
+body footer .share p {
+  font-size: 2.5vw;
+  color: #62b2fd;
+}
+body footer .share a {
+  border: 0.2vw solid #62b2fd;
+  border-radius: 100%;
+  padding: 1vw;
+  margin-left: 1vw;
+  transition: 1s;
+}
+body footer .share a img {
+  width: 3vw;
+}
+body footer .share a:hover {
+  border: 0.2vw solid white;
+}
+body footer .float0 {
+  background-color: #223695;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

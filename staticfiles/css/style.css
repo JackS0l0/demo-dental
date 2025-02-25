@@ -31,6 +31,25 @@ body a {
 body .btn {
   color: white;
 }
+body #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  z-index: 99;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: 2s;
+}
+body #myBtn i {
+  font-size: 2.5vw;
+}
+body #myBtn:hover {
+  color: #62b2fd;
+}
 body .navbarBlock {
   padding: 2.5vw 3.5vw;
   position: relative;
@@ -159,6 +178,131 @@ body main {
   background-size: cover;
   background-attachment: fixed;
 }
+body main .lastesBlog {
+  padding: 10vw 0;
+}
+body main .lastesBlog .head {
+  font-size: 4.5vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vw;
+  word-spacing: 0.4vw;
+  font-weight: bold;
+  flex-direction: column;
+}
+body main .lastesBlog .head .f2 {
+  font-size: 2vw;
+  color: #62b2fd;
+}
+body main .lastesBlog .blog {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .lastesBlog .blog .line {
+  width: 0.1vw;
+  height: 100%;
+  border-right: 0.1vw solid white;
+}
+body main .lastesBlog .blog .article {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  text-align: center;
+}
+body main .lastesBlog .blog .article .date {
+  font-weight: bold;
+}
+body main .lastesBlog .blog .article a {
+  font-size: 1.8vw;
+  color: #62b2fd;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+}
+body main .memberships {
+  margin: 2vw 5vw;
+  padding: 5vw 0;
+}
+body main .memberships .head {
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
+}
+body main .memberships .logosBlock {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 2vw;
+  margin-top: 4vw;
+  justify-content: space-between;
+}
+body main .memberships .logosBlock .img {
+  overflow: hidden;
+  padding: 1vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1vw;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .memberships .logosBlock .img img {
+  width: 15vw;
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .doctorsBlock .doctor {
+  position: relative;
+}
+body main .doctorsBlock .doctor .relativeSide {
+  display: flex;
+}
+body main .doctorsBlock .doctor .relativeSide .img img {
+  width: 49.45vw;
+  height: 55vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+body main .doctorsBlock .doctor .relativeSide .empty {
+  width: 50vw;
+  height: 55vw;
+  background-color: #070C24;
+}
+body main .doctorsBlock .doctor .info {
+  top: 2vw;
+  padding: 5vw;
+  width: 50vw;
+  height: 50vw;
+  right: 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #223695;
+  position: absolute;
+}
+body main .doctorsBlock .doctor .info .name {
+  text-align: center;
+  font-size: 5vw;
+}
+body main .doctorsBlock .doctor .info .btnDetailView {
+  display: flex;
+  justify-content: center;
+}
+body main .doctorsBlock .doctor .info .btnDetailView .btn {
+  font-weight: bold;
+  padding: 1vw 2vw;
+  border-radius: 5vw;
+  background: #62b2fd;
+  margin-top: 2vw;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .doctorsBlocksecond .doctor .info {
+  left: 10vw;
+}
 body main .firstModule {
   margin: 0 5vw;
   color: white;
@@ -203,8 +347,6 @@ body main .welcomeModule {
   margin: 5vw;
   color: white;
   background-color: #172869;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   padding: 2vw;
 }
 body main .welcomeModule .head {
@@ -216,6 +358,9 @@ body main .welcomeModule .head p {
 }
 body main .welcomeModule .head .f1 {
   font-size: 4vw;
+}
+body main .welcomeModule .head .f2 {
+  color: #62b2fd;
 }
 body main .welcomeModule .middle {
   display: flex;
@@ -251,21 +396,25 @@ body main .welcomeModule .middle .right p {
 body main .welcomeModule .middle .right img {
   width: 40vw;
 }
-body main .welcomeModule .request {
+body main .welcomeModule .requestBtn {
   display: flex;
   justify-content: center;
   margin-top: 5vw;
 }
-body main .welcomeModule .request .btn {
+body main .welcomeModule .requestBtn .btn {
   padding: 1.5vw 5vw;
   border-radius: 5vw;
   background-color: #62b2fd;
+}
+body main .welcomeModulesecond {
+  margin: 0;
 }
 body main .special {
   margin: 4vw 5vw 2vw 5vw;
 }
 body main .special .head {
-  font-size: 4vw;
+  font-size: 5vw;
+  margin-bottom: 4vw;
   text-align: center;
 }
 body main .special .blocks {
@@ -284,44 +433,90 @@ body main .special .blocks .block .f1 {
   font-size: 2vw;
   margin-bottom: 1vw;
 }
-body main .doctorInLeft {
-  margin: 2vw 5vw;
+body main .googleReviewsBlock {
+  position: relative;
+}
+body main .googleReviewsBlock .background {
+  height: 50vw;
+  background-image: url(../media/bk4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(70%);
+}
+body main .googleReviewsBlock .googleReviewBox {
+  width: 100%;
+  padding: 5vw 0;
+  top: 0;
+  position: absolute;
+}
+body main .googleReviewsBlock .googleReviewBox .head {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-body main .doctorInLeft img {
+body main .googleReviewsBlock .googleReviewBox .head .f1 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+body main .googleReviewsBlock .googleReviewBox .head .f2 {
+  font-size: 2vw;
+  text-transform: uppercase;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  margin: 2vw 5vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review {
+  background-color: white;
+  color: black;
   width: 40vw;
-  margin-right: 5vw;
-  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review a {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 0.2vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person {
+  display: flex;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .img {
+  margin-right: 1vw;
+}
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .img img {
+  border-radius: 100%;
+  width: 5vw;
+  height: 5vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
 }
-body main .doctorInLeft .text {
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: center;
-  text-align: center;
 }
-body main .doctorInLeft .text .name {
-  font-size: 3vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock .name {
+  font-weight: bold;
 }
-body main .doctorInLeft .text .position {
-  margin: 3vw 0;
-  width: 30vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .person .infoBlock .star img {
+  width: 8vw;
 }
-body main .doctorInLeft .text .btn {
-  background-color: #62b2fd;
-  margin-top: 2vw;
-  padding: 1vw 3vw;
-  font-size: 1.5vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .top .gimg img {
+  width: 3vw;
 }
-body main .doctorInLeft:nth-child(even) img {
-  margin: 0;
-  margin-left: 5vw;
+body main .googleReviewsBlock .googleReviewBox .reviews .review .middle {
+  margin: 2vw 0;
 }
 body main .mapBlock {
   height: 60vw;
@@ -358,18 +553,125 @@ body main .mapBlock .text .btn {
   padding: 1vw 4vw;
   font-size: 2vw;
 }
-body main .blockHead {
+body main .servicesBlock {
+  padding: 5vw 0;
+}
+body main .servicesBlock .servicesHeadText {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 2vw 0;
-  margin: 2vw 0;
+  margin-bottom: 5vw;
 }
-body main .blockHead .f1 {
+body main .servicesBlock .servicesHeadText .f1 {
   font-size: 4vw;
 }
-body main .blockHead .f2 {
+body main .servicesBlock .servicesHeadText .f2 {
+  font-size: 2.5vw;
+  color: #62b2fd;
+}
+body main .servicesBlock .servies .service {
+  display: flex;
+  justify-content: space-between;
+}
+body main .servicesBlock .servies .service .img img {
+  width: 49.4vw;
+  height: 49.4vw;
+}
+body main .servicesBlock .servies .service .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+  text-align: center;
+}
+body main .servicesBlock .servies .service .info .name {
   font-size: 2vw;
+  font-weight: bold;
+  color: #62b2fd;
+}
+body main .servicesBlock .servies .service .info .txt {
+  margin: 2vw 0;
+}
+body main .servicesBlock .servies .service .info .btn {
+  background-color: #62b2fd;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
+}
+body main .serviesList {
+  background-color: #172869;
+  margin: 2vw 5vw;
+  padding: 5vw 0;
+}
+body main .serviesList .head {
+  display: flex;
+  justify-content: center;
+  font-size: 3vw;
+}
+body main .serviesList .list {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  row-gap: 1vw;
+  margin: 2vw 0;
+}
+body main .serviesList .list a {
+  color: #62b2fd;
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+}
+body main .request {
+  position: relative;
+  height: 50vw;
+}
+body main .request .background {
+  height: 50vw;
+  background-image: url(../media/bk3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body main .request .context {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5vw 0;
+}
+body main .request .context .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .request .context .head .f1 {
+  font-size: 4vw;
+}
+body main .request .context .head .f2 {
+  font-size: 2.5vw;
+  color: #62b2fd;
+}
+body main .request .context .txt {
+  display: flex;
+  justify-content: center;
+  margin: 4vw 0;
+}
+body main .request .context .txt p {
+  width: 70%;
+}
+body main .request .context .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .request .context .links .tel {
+  margin-bottom: 2vw;
+  color: #62b2fd;
+  font-size: 2.5vw;
+}
+body main .request .context .links .btn {
+  background-color: #62b2fd;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
 }
 body footer {
   background-image: url(../media/bk1.jpg);

@@ -5,6 +5,7 @@
 $color1: #223695;
 $color2: #62b2fd;
 $color3: #172869;
+$color4: #070C24;
 *{
     margin: 0;
     padding: 0;
@@ -28,6 +29,25 @@ body{
     }
     .btn{
         color: white;
+    }
+    #myBtn{
+        display: none;
+        position: fixed;
+        bottom: 2vw;
+        right: 2vw;
+        z-index: 99;
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        transition: 2s;
+        i{
+            font-size: 2.5vw;
+        }
+    }
+    #myBtn:hover{
+        color: $color2;
     }
     font-family: muli;
     background: $color1;
@@ -163,6 +183,135 @@ body{
         background-image: url(../media/bk1.jpg);
         background-size: cover;
         background-attachment: fixed;
+        .lastesBlog{
+            padding: 10vw 0;
+            .head{
+                font-size: 4.5vw;
+                display: flex;
+                align-items: center;
+                margin-bottom: 5vw;
+                word-spacing: 0.4vw;
+                font-weight: bold;
+                flex-direction: column;
+                .f2{
+                    font-size: 2vw;
+                    color: $color2;
+                }
+            }
+            .blog{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                justify-content: space-between;
+                align-items: center;
+                .line{
+                    width: 0.1vw;
+                    height: 100%;
+                    border-right: 0.1vw solid white;
+                }
+                .article{
+                    display: flex;
+                    flex-direction: column;
+                    width: 30vw;
+                    text-align: center;
+                    .date{
+                        font-weight: bold;
+                    }
+                    a{
+                        font-size: 1.8vw;
+                        color: $color2;
+                        font-weight: bold;
+                        text-decoration: underline;
+                        text-underline-offset: 0.3vw;
+                    }
+                }
+            }
+        }
+        .memberships{
+            margin: 2vw 5vw;
+            padding: 5vw 0;
+            .head{
+                font-size: 4vw;
+                display: flex;
+                justify-content: center;
+            }
+            .logosBlock{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                row-gap: 2vw;
+                margin-top: 4vw;
+                justify-content: space-between;
+                .img{
+                    overflow: hidden;
+                    padding: 1vw;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 1vw;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    img{
+                        width: 15vw;
+                        height: 15vw;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .doctorsBlock{
+            .doctor{
+                position: relative;
+                .relativeSide{
+                    display: flex;
+                    .img{
+                        img{
+                            width: 49.45vw;
+                            height: 55vw;
+                            object-fit: cover;
+                            object-position: top;
+                        }
+                    }
+                    .empty{
+                        width: 50vw;
+                        height: 55vw;
+                        background-color: $color4;
+                    }
+                }
+                .info{
+                    top: 2vw;
+                    padding: 5vw;
+                    width: 50vw;
+                    height: 50vw;
+                    right: 10vw;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $color1;
+                    position: absolute;
+                    .name{
+                        text-align: center;
+                        font-size: 5vw;
+                    }
+                    .btnDetailView{
+                        display: flex;
+                        justify-content: center;
+                        .btn{
+                            font-weight: bold;
+                            padding: 1vw 2vw;
+                            border-radius: 5vw;
+                            background: $color2;
+                            margin-top: 2vw;
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+        .doctorsBlocksecond{
+            .doctor{
+                .info{
+                    left: 10vw;
+                }
+            }
+        }
         .firstModule{
             margin: 0 5vw;
             color: white;
@@ -206,8 +355,6 @@ body{
             margin:5vw;
             color: white;
             background-color: $color3;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
             padding: 2vw;
             .head{
                 margin-bottom: 2vw;
@@ -217,6 +364,9 @@ body{
                 }
                 .f1{
                     font-size: 4vw;
+                }
+                .f2{
+                    color: $color2;
                 }
             }
             .middle{
@@ -253,7 +403,7 @@ body{
                     }
                 }
             }
-            .request{
+            .requestBtn{
                 display: flex;
                 justify-content: center;
                 margin-top: 5vw;
@@ -264,10 +414,14 @@ body{
                 }
             }
         }
+        .welcomeModulesecond{
+            margin: 0;
+        }
         .special{
             margin: 4vw 5vw 2vw 5vw;
             .head{
-                font-size: 4vw;
+                font-size: 5vw;
+                margin-bottom: 4vw;
                 text-align: center;
             }
             .blocks{
@@ -287,43 +441,91 @@ body{
                 }
             }
         }
-        .doctorInLeft{
-            margin: 2vw 5vw;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            img{
-                width: 40vw;
-                margin-right: 5vw;
-                height: 40vw;
-                object-fit: cover;
-                object-position: top;
+        .googleReviewsBlock{
+            position: relative;
+            .background{
+                height: 50vw;
+                background-image: url(../media/bk4.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+                filter: brightness(70%);
             }
-            .text{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                align-items: center;
-                text-align: center;
-                .name{
-                    font-size: 3vw;
+            .googleReviewBox{
+                width: 100%;
+                padding: 5vw 0;
+                top: 0;
+                position: absolute;
+                .head{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .f1{
+                        font-size: 4vw;
+                        font-weight: bold;
+                    }
+                    .f2{
+                        font-size: 2vw;
+                        text-transform: uppercase;
+                    }
                 }
-                .position{
-                    margin: 3vw 0;
-                    width: 30vw;
+                .reviews{
+                    display: grid;
+                    justify-content: space-between;
+                    grid-template-columns: auto auto;
+                    margin: 2vw 5vw;
+                    .review{
+                        background-color: white;
+                        color: black;
+                        width: 40vw;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2vw;
+                        a{
+                            color: black;
+                            text-decoration: underline;
+                            text-underline-offset: 0.2vw;
+                        }
+                        .top{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            .person{
+                                display: flex;
+                                .img{
+                                    margin-right: 1vw;
+                                    img{
+                                        border-radius: 100%;
+                                        width: 5vw;
+                                        height: 5vw;
+                                        object-fit: cover;
+                                        object-position: top;
+                                    }
+                                }
+                                .infoBlock{
+                                    display: flex;
+                                    flex-direction: column;
+                                    .name{
+                                        font-weight: bold;
+                                    }
+                                    .star{
+                                        img{
+                                            width: 8vw;
+                                        }
+                                    }
+                                }
+                            }
+                            .gimg{
+                                img{
+                                    width: 3vw;
+                                }
+                            }
+                        }
+                        .middle{
+                            margin: 2vw 0;
+                        }
+                    }
                 }
-                .btn{
-                    background-color: $color2;
-                    margin-top: 2vw;
-                    padding: 1vw 3vw;
-                    font-size: 1.5vw;
-                }
-            }
-        }
-        .doctorInLeft:nth-child(even){
-            img{
-                margin: 0;
-                margin-left: 5vw;
             }
         }
         .mapBlock{
@@ -362,17 +564,128 @@ body{
                 }
             }
         }
-        .blockHead{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 2vw 0;
-            margin: 2vw 0;
-            .f1{
-                font-size: 4vw;
+        .servicesBlock{
+            padding: 5vw 0;
+            .servicesHeadText{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 5vw;
+                .f1{
+                    font-size: 4vw;
+                }
+                .f2{
+                    font-size: 2.5vw;
+                    color: $color2;
+                }
+            }   
+            .servies{
+                .service{
+                    display: flex;
+                    justify-content: space-between;
+                    .img{
+                        img{
+                            width: 49.4vw;
+                            height: 49.4vw;
+                        }
+                    }
+                    .info{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 5vw;
+                        text-align: center;
+                        .name{
+                            font-size: 2vw;
+                            font-weight: bold;
+                            color: $color2;
+                        }
+                        .txt{
+                            margin: 2vw 0;
+                        }
+                        .btn{
+                            background-color: $color2;
+                            padding: 1vw 3vw;
+                            border-radius: 5vw;
+                        }
+                    }
+                }
             }
-            .f2{
-                font-size: 2vw;
+        }
+        .serviesList{
+            background-color: $color3;
+            margin: 2vw 5vw;
+            padding: 5vw 0;
+            .head{
+                display: flex;
+                justify-content: center;
+                font-size: 3vw;
+            }
+            .list{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: space-around;
+                row-gap: 1vw;
+                margin: 2vw 0;
+                a{
+                    color: $color2;
+                    text-decoration: underline;
+                    text-underline-offset: 0.3vw;
+                }
+            }
+        }
+        .request{
+            position: relative;
+            height: 50vw;
+            .background{
+                height: 50vw;
+                background-image: url(../media/bk3.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .context{
+                position: absolute;
+                top: 0;
+                left: 0;
+                .head{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    .f1{
+                        font-size: 4vw;
+                    }
+                    .f2{
+                        font-size: 2.5vw;
+                        color: $color2;
+                    }
+                }
+                .txt{
+                    display: flex;
+                    justify-content: center;
+                    p{
+                        width: 70%;
+                    }
+                    margin: 4vw 0;
+                }
+                padding: 5vw 0;
+                .links{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .tel{
+                        margin-bottom: 2vw;
+                        color: $color2;
+                        font-size: 2.5vw;
+                    }
+                    .btn{
+                        background-color: $color2;
+                        padding: 1vw 3vw;
+                        border-radius: 5vw;
+                    }
+                }
             }
         }
     }
