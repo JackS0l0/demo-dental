@@ -61,7 +61,8 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="blog">
+            <p>{{maintext.blogHeader | safe}}</p>
+            <div class="blog" id="blog">
                 {% for article in blog %}
                     <div class="articles">
                         <a href="{% url 'index' %}">

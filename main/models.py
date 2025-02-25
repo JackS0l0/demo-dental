@@ -26,6 +26,7 @@ class MainTexts(models.Model):
     headerSlider=RichTextField('Header Slider Text',default='none')
     reviewsHeader=RichTextField('Reviews Header',default='none')
     servicesHeader=RichTextField('Servies Header',default='none')
+    blogHeader=RichTextField('Blog Header',default='none')
     def __str__(self):
         return f'Main Texts'
     class Meta:
