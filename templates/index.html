@@ -25,6 +25,38 @@
             <div class="consultations">
                 <p>{{maintext.consultations | safe}}</p>
             </div>
+            <p class="reviewsHeader">{{maintext.reviewsHeader | safe}}</p>
+            <div class="reviewsBlock">
+                {% for post in reviews %}
+                    <div class="review">
+                        <p>{{post.review | safe}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="doctorsBlock">
+                {% for doctor in doctors %}
+                    <div>
+                        <div class="doctor">
+                            <a href="{% url 'index' %}" class="img">
+                                <img src="{{doctor.img}}">
+                            </a>
+                            <div class="info">
+                                <a href="{% url 'index' %}" class="name">{{doctor.name}}</a>
+                                <p class="desc">{{doctor.desc | safe}}</p>
+                                <a href="{% url 'index' %}" class="btn">Learn more about {{doctor.name}}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="servicesBlock">
+                <p class="reviewsHeader">{{maintext.servicesHeader | safe}}</p>
+                <div class="servicesList">
+                    {% for service in servies %}
+                    <li><a href="{% url 'index' %}">{{service.name}}</a></li>
+                    {% endfor %}
+                </div>
+            </div>
         {% endfor %}
     </main>
 {% endblock %}

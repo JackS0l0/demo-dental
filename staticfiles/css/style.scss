@@ -130,6 +130,83 @@ body{
     }
     main{
         min-height: 100vh;
+        .servicesBlock{
+            background-color: $color2;
+            margin: 10vw 5vw;
+            padding: 1vw 0;
+            .servicesList{
+                margin: 1vw;
+                padding: 0 5vw;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                justify-content: space-between;
+                row-gap: 2vw;
+                a{
+                    transition: 1s;
+                }
+                a:hover{
+                    color: $color1;
+                }
+            }
+        }
+        .doctorsBlock{
+            margin: 2vw 5vw;
+            div{
+                .doctor{
+                    display: flex;
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 1vw;
+                    overflow: hidden;
+                    width: 80vw;
+                    height: 40vw;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    .img{
+                        img{
+                            width: 40vw;
+                            height: 40vw;
+                            object-fit: cover;
+                            margin-right: 2vw;
+                            object-position: top;
+                        }
+                    }
+                    .info{
+                        padding: 5vw 0;
+                        text-align: center;
+                        .name{
+                            font-size: 3vw;
+                        }
+                        .btn{
+                            background-color: $color1;
+                            margin-top: 4vw;
+                            padding: 1vw 4vw;
+                            border-radius: 5vw;
+                        }
+                        .desc{
+                            margin: 4vw 0;
+                        }
+                    }
+                }
+            }
+        }
+        .reviewsHeader{
+            margin-top: 5vw;
+        }
+        .reviewsBlock{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .review{
+                margin: 2vw 0;
+                padding: 5vw;
+                width: 50vw;
+                background-color: white;
+                color: black;
+                border-radius: 1vw;
+            }
+        }
         .firstBlock{
             margin: 2vw 15vw;
             padding: 5vw 0;

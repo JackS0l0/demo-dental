@@ -1,6 +1,13 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.utils import timezone
+class Servies(models.Model):
+    name=models.CharField('Service name',max_length=200,unique=True,default='')
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Service'
+        verbose_name_plural = 'Services'
 class MainTexts(models.Model):
     firstBlockTitle=RichTextField('First Block Title',default='none')
     contact_link=models.CharField('Phone url',max_length=200)
@@ -8,6 +15,8 @@ class MainTexts(models.Model):
     thirdBlockTitle=RichTextField('Third Block Title',default='none')
     consultations=RichTextField('Consultations',default='none')
     headerSlider=RichTextField('Header Slider Text',default='none')
+    reviewsHeader=RichTextField('Reviews Header',default='none')
+    servicesHeader=RichTextField('Servies Header',default='none')
     def __str__(self):
         return f'Main Texts'
     class Meta:
@@ -30,3 +39,22 @@ class HeaderSlider(models.Model):
     class Meta:
         verbose_name = 'Image'
         verbose_name_plural = 'Header Slider Images'
+class Reviews(models.Model):
+    name=models.CharField('Name',max_length=200)
+    review=RichTextField('Review',default='none')
+    date=models.DateTimeField('Date',default=timezone.now)
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
+class Doctors(models.Model):
+    name=models.CharField('Name',max_length=200)
+    img=models.URLField('Photo',default='')
+    desc=RichTextField('Description',default='none')
+    date=models.DateTimeField('Date',default=timezone.now)
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Doctor'
+        verbose_name_plural = 'Doctors'
