@@ -1,101 +1,21 @@
 {% load static %}
 {% load i18n %}
 <div class="navbarBlock">
-    <div class="float1">
-        <span>
-            <a href="{% url 'index' %}" class="logo"><img src="https://einstein-clients.imgix.net/4213/465369/original_logo-main.svg?1725494520=&auto=format&fit=max&w=420" class="logoImgTop"></a>
-        </span>
-        <span>
-            <a href="{% url 'index' %}" class="left">Blog</a>
-            <a href="tel:+1-703-555-5555" class="left">(703) 385-0303</a>
-            <a href="{% url 'index' %}" class="left">Location</a>
-            <a href="{% url 'index' %}" class="left">Contact</a>
-            <div class="dropdown">
-                <a class="btnmenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu <i class="bi bi-list"></i></a>
-                <ul class="dropdown-menu">
-                    <div class="menuContent">
-                        <div class="block">
-                            <p>About</p>
-                            <a href="{% url 'index' %}">About Us</a>
-                            <a href="{% url 'index' %}">Blog</a>
-                            <a href="{% url 'index' %}">What Sets Us Apart</a>
-                            <a href="{% url 'index' %}">Charles D. Kirksey, DDS</a>
-                            <a href="{% url 'index' %}">Milan Simanek, DDS</a>
-                            <a href="{% url 'index' %}">Touraj Kamali, DDS</a>
-                            <a href="{% url 'index' %}">Fairfax Office</a>
-                        </div>
-                        <div class="block">
-                            <p>Cosmetic</p>
-                            <a href="{% url 'index' %}">Cosmetic Dentistry</a>
-                            <a href="{% url 'index' %}">Dental Bonding</a>
-                            <a href="{% url 'index' %}">Invisalign</a>
-                            <a href="{% url 'index' %}">Orthodontics</a>
-                            <a href="{% url 'index' %}">Veneers</a>
-                            <a href="{% url 'index' %}">Smile Makeover</a>
-                            <a href="{% url 'index' %}">Teeth Whitening</a>
-                        </div>
-                        <div class="block">
-                            <p>Restorative</p>
-                            <a href="{% url 'index' %}">Restorative Dentistry</a>
-                            <a href="{% url 'index' %}">Dental Bridges</a>
-                            <a href="{% url 'index' %}">Dental Crowns</a>
-                            <a href="{% url 'index' %}">Dental Implants</a>
-                            <a href="{% url 'index' %}">Dental Implants Cost</a>
-                            <a href="{% url 'index' %}">Dentures</a>
-                            <a href="{% url 'index' %}">Full Mouth Reconstruction</a>
-                            <a href="{% url 'index' %}">Root Canal</a>
-                        </div>
-                        <div class="block">
-                            <p>General</p>
-                            <a href="{% url 'index' %}">General Dentistry</a>
-                            <a href="{% url 'index' %}">Teeth Cleaning</a>
-                            <a href="{% url 'index' %}">Emergency Dentist</a>
-                            <a href="{% url 'index' %}">Gum Disease</a>
-                            <a href="{% url 'index' %}">Oral Cancer Screenings</a>
-                            <a href="{% url 'index' %}">Pediatric Dentistry</a>
-                            <a href="{% url 'index' %}">Sealants and Fluoride</a>
-                            <a href="{% url 'index' %}">TMJ</a>
-                        </div>
-                        <div class="block">
-                            <p>Oral Surgery</p>
-                            <a href="{% url 'index' %}">Oral Surgery</a>
-                            <a href="{% url 'index' %}">Bone Grafting</a>
-                            <a href="{% url 'index' %}">Gum Graft</a>
-                            <a href="{% url 'index' %}">Sinus Lift</a>
-                            <a href="{% url 'index' %}">Tooth Extraction</a>
-                            <a href="{% url 'index' %}">Wisdom Teeth Removal</a>
-                        </div>
-                    </div>
-                    <div class="viewall">
-                        <a href="{% url 'index' %}" class="seeall">View All Services</a>
-                    </div>
-                </ul>
-            </div>
-        </span>
-    </div>
-</div>
-<div class="mobnavBar">
-    <div class="float1">
-        <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">MENU</button>
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            </div>
-            <div class="offcanvas-body">
-                <a href="{% url 'index' %}">About <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">Cosmetic <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">Restorative <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">General <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">Oral Surgey <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">Request an Appointment <i class="bi bi-arrow-right-short"></i></a>
-                <a href="{% url 'index' %}">View All Pages <i class="bi bi-arrow-right-short"></i></a>
-            </div>
+    <span>
+        <a href="./index.html" class="logo"><img src="{% static 'media/logo.svg' %}">BrightDent</a>
+    </span>
+    <span>
+        <a href="./index.html" class="left">Blog</a>
+        <a href="./index.html" class="left">Contact</a>
+        <a href="./index.html" class="left">About us</a>
+        <a href="./index.html" class="left"></a>
+        <div class="dropdown">
+            <button class="" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'media/menu.svg' %}"></button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Servies</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </div>
-        <a href="{% url 'index' %}">LOCATION</a>
-        <a href="{% url 'index' %}">CALL</a>
-        <a href="{% url 'index' %}">CONTACT</a>
-    </div>
-    <div class="float2">
-        <a href="{% url 'index' %}" class="logoMob"><img src="https://einstein-clients.imgix.net/4213/465369/original_logo-main.svg?1725494520=&auto=format&fit=max&w=420"></a>
-    </div>
+    </span>
 </div>

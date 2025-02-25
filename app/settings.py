@@ -11,6 +11,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'ckeditor',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,3 +69,8 @@ STATICFILES_DIRS = [ BASE_DIR / 'staticfiles' ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+    },
+}

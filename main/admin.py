@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import MainTexts,Specialty
+admin.site.register(MainTexts)
+admin.site.register(Specialty)
