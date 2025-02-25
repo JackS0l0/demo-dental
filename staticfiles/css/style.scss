@@ -868,6 +868,13 @@ body{
         }
     }
 }
+@media screen and (min-width: 1001px) {
+    body{
+        .mobnavBar{
+            display: none;
+        }
+    }
+}
 @media screen and (max-width: 1000px) {
     body{
         #myBtn{

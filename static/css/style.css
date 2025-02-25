@@ -845,6 +845,11 @@ body footer .float0 {
   text-align: center;
 }
 
+@media screen and (min-width: 1001px) {
+  body .mobnavBar {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) {
   body #myBtn i {
     font-size: 7vw;
