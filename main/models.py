@@ -27,6 +27,8 @@ class MainTexts(models.Model):
     reviewsHeader=RichTextField('Reviews Header',default='none')
     servicesHeader=RichTextField('Servies Header',default='none')
     blogHeader=RichTextField('Blog Header',default='none')
+    footertxt=RichTextField('Footer bottom text',default='none')
+    contactinbottom=RichTextField('Contact text in bottom',default='none')
     def __str__(self):
         return f'Main Texts'
     class Meta:

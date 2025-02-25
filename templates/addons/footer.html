@@ -1,5 +1,26 @@
 {% load static %}
 {% load i18n %}
 <footer>
-    
+    {% for maintext in maintexts %}
+    <div class="float2">
+        <div class="left">
+            <div class="mainTxt">
+                <p>{{maintext.contactinbottom | safe}}</p>
+            </div>
+            <a href="{% url 'index' %}" class="btn">Detailed contact information</a>
+        </div>
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1471.8437710723322!2d49.98057709468569!3d40.43307682677102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64eeedaec362b%3A0x846b3632abf52a38!2sFairfax%20Family%20Dental%20Care!5e0!3m2!1sen!2saz!4v1740498104527!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="float1">
+        <p>Rate, Review & Explore</p>
+        <a href="{% url 'index' %}"><img src="{% static 'media/f.png' %}"></a>
+        <a href="{% url 'index' %}"><img src="{% static 'media/g.png' %}"></a>
+        <a href="{% url 'index' %}"><img src="{% static 'media/x.png' %}"></a>
+    </div>
+    <div class="float0">
+        <p>{{maintext.footertxt | safe}}</p>
+    </div>
+    {% endfor %}
 </footer>
