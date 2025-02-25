@@ -2,13 +2,13 @@
 {% load i18n %}
 <div class="navbarBlock">
     <span>
-        <a href="./index.html" class="logo"><img src="{% static 'media/logo.svg' %}">BrightDent</a>
+        <a href="{% url 'index' %}" class="logo"><img src="{% static 'media/logo.svg' %}">BrightDent</a>
     </span>
     <span>
-        <a href="./index.html" class="left">Blog</a>
-        <a href="./index.html" class="left">Contact</a>
-        <a href="./index.html" class="left">About us</a>
-        <a href="./index.html" class="left"></a>
+        <a href="{% url 'index' %}" class="left">Blog</a>
+        <a href="{% url 'index' %}" class="left">Contact</a>
+        <a href="{% url 'index' %}" class="left">About us</a>
+        <a href="{% url 'index' %}" class="left"></a>
         <div class="dropdown">
             <button class="" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'media/menu.svg' %}"></button>
             <ul class="dropdown-menu">

@@ -1,5 +1,15 @@
 {% load static %}
 {% load i18n %}
 <header>
-    
+    {% for maintext in maintexts %}
+    <div class="headerSlider">
+        {% for headersliderobject in headerslider %}
+            <div><img src="{{headersliderobject.img}}"></div>
+        {% endfor %}
+    </div>
+    <div class="headerStatic">
+        <p>{{maintext.headerSlider | safe}}</p>
+        <a href="#main" class="btn">Discovery us</a>
+    </div>
+    {% endfor %}
 </header>

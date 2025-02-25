@@ -7,6 +7,7 @@ class MainTexts(models.Model):
     secondBlockTitle=RichTextField('Second Block Title',default='none')
     thirdBlockTitle=RichTextField('Third Block Title',default='none')
     consultations=RichTextField('Consultations',default='none')
+    headerSlider=RichTextField('Header Slider Text',default='none')
     def __str__(self):
         return f'Main Texts'
     class Meta:
@@ -21,3 +22,11 @@ class Specialty(models.Model):
     class Meta:
         verbose_name = 'Specialty'
         verbose_name_plural = 'Specialties'
+class HeaderSlider(models.Model):
+    img=models.URLField('Image',default='')
+    date=models.DateTimeField('Date',default=timezone.now)
+    def __str__(self):
+        return f'Header Slider Images {self.id}'
+    class Meta:
+        verbose_name = 'Image'
+        verbose_name_plural = 'Header Slider Images'

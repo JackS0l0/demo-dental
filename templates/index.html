@@ -3,7 +3,7 @@
 {% load i18n %}
 {% block main %}
     {% include 'addons/header.html' %}
-    <main>
+    <main id="main">
         {% for maintext in maintexts %}
             <div class="firstBlock">
                 <p>{{maintext.firstBlockTitle | safe}}</p>
