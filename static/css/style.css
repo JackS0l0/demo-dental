@@ -715,6 +715,7 @@ body footer .address {
   justify-content: space-between;
 }
 body footer .address .right iframe {
+  width: 100%;
   height: 100%;
 }
 body footer .address .left {
@@ -842,4 +843,78 @@ body footer .float0 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  body #myBtn i {
+    font-size: 7vw;
+  }
+  body .navbarBlock {
+    display: none;
+  }
+  body .mobnavBar {
+    background-color: #223695;
+  }
+  body .mobnavBar .float1 {
+    padding: 1vw 0.2vw;
+    background-color: #223695;
+    font-size: 4vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  body .mobnavBar .float1 button {
+    background: none;
+    border: 0;
+    color: white;
+  }
+  body .mobnavBar .float1 .offcanvas {
+    background-color: #223695;
+    color: white;
+  }
+  body .mobnavBar .float1 .offcanvas .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+  }
+  body .mobnavBar .float1 .offcanvas .offcanvas-body a {
+    font-size: 6vw;
+    margin-bottom: 1vw;
+  }
+  body .mobnavBar .float2 {
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+  }
+  body .mobnavBar .float2 .logoMob img {
+    width: 55vw;
+  }
+  body header .headCarusel img {
+    height: 90vh;
+    filter: brightness(60%);
+  }
+  body header .headText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    bottom: 30vw;
+    align-items: center;
+  }
+  body header .headText .f1 {
+    font-size: 8vw;
+    font-weight: bold;
+  }
+  body header .headText .f2 {
+    font-size: 4vw;
+  }
+  body header .headText .discovery {
+    font-size: 4vw;
+    border-radius: 12vw;
+    padding: 4vw 20vw;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -733,6 +733,7 @@ body{
             justify-content: space-between;
             .right{
                 iframe{
+                    width: 100%;
                     height: 100%;
                 }
             }
@@ -864,6 +865,89 @@ body{
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    body{
+        #myBtn{
+            i{
+                font-size: 7vw;
+            }
+        }
+        .navbarBlock{
+            display: none;
+        }
+        .mobnavBar{
+            background-color: $color1;
+            .float1{
+                padding: 1vw 0.2vw;
+                background-color: $color1;
+                font-size: 4vw;
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 1vw;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 99999;
+                button{
+                    background: none;
+                    border: 0;
+                    color: white;
+                }
+                .offcanvas{
+                    background-color: $color1;
+                    color: white;
+                    .offcanvas-body{
+                        display: flex;
+                        flex-direction: column;
+                        a{
+                            font-size: 6vw;
+                            margin-bottom: 1vw;
+                        }
+                    }
+                }
+            }
+            .float2{
+                margin-top: 10vw;
+                display: flex;
+                justify-content: center;
+                .logoMob{
+                    img{
+                        width: 55vw;
+                    }
+                }
+            }
+        }
+        header{
+            .headCarusel{
+                img{
+                    height: 90vh;
+                    filter: brightness(60%);
+                }
+            }
+            .headText{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                right: 0;
+                bottom: 30vw;
+                align-items: center;
+                .f1{
+                    font-size: 8vw;
+                    font-weight: bold;
+                }
+                .f2{
+                    font-size: 4vw;
+                }
+                .discovery{
+                    font-size: 4vw;
+                    border-radius: 12vw;
+                    padding: 4vw 20vw;
+                }
+            }
         }
     }
 }

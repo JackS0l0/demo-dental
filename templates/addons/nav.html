@@ -74,3 +74,28 @@
         </span>
     </div>
 </div>
+<div class="mobnavBar">
+    <div class="float1">
+        <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">MENU</button>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="{% url 'index' %}">About <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">Cosmetic <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">Restorative <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">General <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">Oral Surgey <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">Request an Appointment <i class="bi bi-arrow-right-short"></i></a>
+                <a href="{% url 'index' %}">View All Pages <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+        <a href="{% url 'index' %}">LOCATION</a>
+        <a href="{% url 'index' %}">CALL</a>
+        <a href="{% url 'index' %}">CONTACT</a>
+    </div>
+    <div class="float2">
+        <a href="{% url 'index' %}" class="logoMob"><img src="https://einstein-clients.imgix.net/4213/465369/original_logo-main.svg?1725494520=&auto=format&fit=max&w=420"></a>
+    </div>
+</div>
