@@ -33,7 +33,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="doctorsBlock">
+            <div class="doctorsBlock" id="doctors">
                 {% for doctor in doctors %}
                     <div>
                         <div class="doctor">
@@ -49,13 +49,31 @@
                     </div>
                 {% endfor %}
             </div>
-            <div class="servicesBlock">
+            <div class="seeall">
+                <div class="line"></div>
+                <a href="{% url 'index' %}">See all doctors</a>
+            </div>
+            <div class="servicesBlock" id="services">
                 <p class="reviewsHeader">{{maintext.servicesHeader | safe}}</p>
                 <div class="servicesList">
                     {% for service in servies %}
                     <li><a href="{% url 'index' %}">{{service.name}}</a></li>
                     {% endfor %}
                 </div>
+            </div>
+            <div class="blog">
+                {% for article in blog %}
+                    <div class="articles">
+                        <a href="{% url 'index' %}">
+                            <div class="card">
+                                <div class="content">
+                                    <p class="heading">{{article.date | date:"d M, Y"}}</p>
+                                    <p class="para">{{article.name}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         {% endfor %}
     </main>

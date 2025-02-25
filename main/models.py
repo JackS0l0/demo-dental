@@ -1,6 +1,15 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.utils import timezone
+class Blog(models.Model):
+    name=models.CharField('Name',max_length=200,default='')
+    desc=RichTextField('Description',default='none')
+    date=models.DateTimeField('Date',default=timezone.now)
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Aricle'
+        verbose_name_plural = 'Blog'
 class Servies(models.Model):
     name=models.CharField('Service name',max_length=200,unique=True,default='')
     def __str__(self):
