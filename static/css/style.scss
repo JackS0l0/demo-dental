@@ -416,6 +416,13 @@ body{
 @media screen and (max-width: 1000px) {
     body{
         font-size: 3vw;
+        #myBtn{
+            bottom: 3vw;
+            right: 3vw;
+            i{
+                font-size: 8vw;
+            }
+        }
         .navbarBlock{
             span{
                 .logo{

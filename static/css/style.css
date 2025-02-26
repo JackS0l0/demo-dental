@@ -395,6 +395,13 @@ body footer .float0 {
   body {
     font-size: 3vw;
   }
+  body #myBtn {
+    bottom: 3vw;
+    right: 3vw;
+  }
+  body #myBtn i {
+    font-size: 8vw;
+  }
   body .navbarBlock span .logo {
     font-size: 5vw;
   }
