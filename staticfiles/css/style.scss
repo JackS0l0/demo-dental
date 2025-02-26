@@ -376,6 +376,7 @@ body{
                 }
             }
         }
+        
         .float1{
             display: flex;
             margin: 2vw 0;
@@ -404,8 +405,56 @@ body{
     }
 }
 @media screen and (min-width: 1001px) {
-
+    body{
+        .navbarBlock{
+            .mob{
+                display: none;
+            }
+        }
+    }
 }
 @media screen and (max-width: 1000px) {
-  
+    body{
+        font-size: 3vw;
+        .navbarBlock{
+            span{
+                .logo{
+                    font-size: 5vw;
+                    img{
+                        width: 8vw;
+                    }
+                }
+            }
+            .web{
+                display: none;
+            }
+            .mob{
+                .dropdown{
+                    button{
+                        img{
+                            width: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+        header{
+            .headerSlider{
+                div{
+                    img{
+                        height: 95vh;
+                    }
+                }
+            }
+            .headerStatic{
+                bottom: 75vw;
+                .btn{
+                    padding: 3vw 11vw;
+                    border-radius: 10vw;
+                    font-size: 7vw;
+                    margin-top: 10vw;
+                }
+            }
+        }
+    }
 }

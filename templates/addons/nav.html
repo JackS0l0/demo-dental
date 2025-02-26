@@ -4,11 +4,20 @@
     <span>
         <a href="{% url 'index' %}" class="logo"><img src="{% static 'media/logo.svg' %}">BrightDent</a>
     </span>
-    <span>
+    <span class="web">
         <a href="{% url 'index' %}" class="left">Blog</a>
         <a href="{% url 'index' %}" class="left">Contact</a>
         <a href="{% url 'index' %}" class="left">About us</a>
-        <a href="{% url 'index' %}" class="left"></a>
+        <div class="dropdown">
+            <button class="" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'media/menu.svg' %}"></button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#services">Servies</a></li>
+                <li><a class="dropdown-item" href="#doctors">Doctors</a></li>
+                <li><a class="dropdown-item" href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </span>
+    <span class="mob">
         <div class="dropdown">
             <button class="" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{% static 'media/menu.svg' %}"></button>
             <ul class="dropdown-menu">

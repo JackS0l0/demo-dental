@@ -384,4 +384,39 @@ body footer .float1 a:hover {
 body footer .float0 {
   background-color: #172869;
   padding: 1vw;
+}
+
+@media screen and (min-width: 1001px) {
+  body .navbarBlock .mob {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 3vw;
+  }
+  body .navbarBlock span .logo {
+    font-size: 5vw;
+  }
+  body .navbarBlock span .logo img {
+    width: 8vw;
+  }
+  body .navbarBlock .web {
+    display: none;
+  }
+  body .navbarBlock .mob .dropdown button img {
+    width: 5vw;
+  }
+  body header .headerSlider div img {
+    height: 95vh;
+  }
+  body header .headerStatic {
+    bottom: 75vw;
+  }
+  body header .headerStatic .btn {
+    padding: 3vw 11vw;
+    border-radius: 10vw;
+    font-size: 7vw;
+    margin-top: 10vw;
+  }
 }/*# sourceMappingURL=style.css.map */
