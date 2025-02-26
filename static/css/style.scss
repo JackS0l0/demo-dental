@@ -456,5 +456,43 @@ body{
                 }
             }
         }
+        main{
+            .firstBlock{
+                .btn{
+                    a{
+                        font-size: 4vw;
+                    }
+                }
+            }
+            .secondBlock{
+                display: none;
+            }
+            .consultations{
+                display: none;
+            }
+            .reviewsBlock{
+                .review{
+                    width: 90vw;
+                }
+            }
+            .doctorsBlock{
+                .doctor{
+                    .info{
+                        padding: 3vw 0;
+                        p{
+                            line-clamp: 4;
+                            -webkit-line-clamp: 4;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            margin: 0;
+                        }
+                        .btn{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -419,4 +419,30 @@ body footer .float0 {
     font-size: 7vw;
     margin-top: 10vw;
   }
+  body main .firstBlock .btn a {
+    font-size: 4vw;
+  }
+  body main .secondBlock {
+    display: none;
+  }
+  body main .consultations {
+    display: none;
+  }
+  body main .reviewsBlock .review {
+    width: 90vw;
+  }
+  body main .doctorsBlock .doctor .info {
+    padding: 3vw 0;
+  }
+  body main .doctorsBlock .doctor .info p {
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+  body main .doctorsBlock .doctor .info .btn {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
