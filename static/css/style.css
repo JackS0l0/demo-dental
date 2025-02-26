@@ -445,4 +445,31 @@ body footer .float0 {
   body main .doctorsBlock .doctor .info .btn {
     display: none;
   }
+  body main .servicesBlock .servicesList {
+    padding: 0 2vw;
+    grid-template-columns: auto auto;
+  }
+  body main .blogHeader {
+    margin: 0 2vw;
+  }
+  body main .blog {
+    grid-template-columns: auto;
+    row-gap: 5vw;
+  }
+  body main .blog .articles a .card {
+    width: 90vw;
+    height: 90vw;
+  }
+  body main .blog .articles a .card .content .heading {
+    font-size: 5vw;
+  }
+  body main .blog .articles a .card .content .para {
+    font-size: 7vw;
+  }
+  body footer .float2 {
+    flex-direction: column;
+  }
+  body footer .float2 .left {
+    margin-bottom: 5vw;
+  }
 }/*# sourceMappingURL=style.css.map */

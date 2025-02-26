@@ -493,6 +493,43 @@ body{
                     }
                 }
             }
+            .servicesBlock{
+                .servicesList{
+                    padding: 0 2vw;
+                    grid-template-columns:  auto auto;
+                }
+            }
+            .blogHeader{
+                margin: 0 2vw;
+            }
+            .blog{
+                grid-template-columns: auto;
+                row-gap: 5vw;
+                .articles{
+                    a{
+                        .card{
+                            width: 90vw;
+                            height: 90vw;
+                            .content{
+                                .heading{
+                                    font-size: 5vw;
+                                }
+                                .para{
+                                    font-size: 7vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            .float2{
+                flex-direction: column;
+                .left{
+                    margin-bottom: 5vw;
+                }
+            }
         }
     }
 }
